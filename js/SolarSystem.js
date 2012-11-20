@@ -22,6 +22,13 @@ function SolarSystem(el) {
 	 */
 	this.yearLength = 10;
 	
+	/**
+	 * The color of space, that is, the background of the solar system
+	 *
+	 * @var string
+	 */
+	this.spaceColor = '#fff';
+	
 	var self = this;
 	
 	/**
@@ -159,6 +166,10 @@ function SolarSystem(el) {
 			x: Math.floor(width / 2),
 			y: Math.floor(height / 2)
 		}
+		
+		// draw space
+		context.fillStyle = self.spaceColor;
+		context.fillRect(0, 0, canvasElement.width, canvasElement.height);
 		
 		// draw sun
 		context.beginPath();

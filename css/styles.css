@@ -31,6 +31,12 @@
 	font-size: 20px;
 }
 
+.factoid .fact {
+	padding: 5px;
+	
+	border: 1px solid #002D4C;
+}
+
 /*= Slides
 ************************************/
 .slide1 {

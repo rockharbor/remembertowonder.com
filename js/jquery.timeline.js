@@ -39,6 +39,22 @@
 			
 			/**
 			 * Called upon initialization
+			 * 
+			 * Automatically adds triggers that were configured in the markup:
+			 * 
+			 * ```
+			 * <div 
+			 *   data-timeline-trigger="somecallback" 
+			 *   data-timeline-type="range"
+			 * />
+			 * ```
+			 * 
+			 * The trigger should be a global function (on the `window` object).
+			 * 
+			 * `data-timeline-type` is optional. If it is 'range', then the 
+			 * trigger's range is configured to be from the top of the element 
+			 * to the bottom of it. Otherwise, it's treated as a 'single' and
+			 * fires when the top of the element is scrolled past.
 			 */
 			init: function() {
 				if (options.debug) {
@@ -48,6 +64,23 @@
 				var self = this;
 				$(window).bind('scroll', function() {
 					methods.scroll.apply(self);
+				});
+				this.find('[data-timeline-trigger]').each(function() {
+					var type = $(this).data('timeline-type');
+					if (typeof type === 'undefined') {
+						type = 'single';
+					}
+					
+					var range = $(this).offset().top;
+					if (type === 'range') {
+						range = [
+							$(this).offset().top,
+							$(this).offset().top + $(this).height()
+						];
+					}
+					
+					var callback = window[$(this).data('timeline-trigger')];
+					methods.trigger.apply(self, [range, callback])
 				});
 				methods.scroll.apply(this);
 			},

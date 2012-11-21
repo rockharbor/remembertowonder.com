@@ -24,7 +24,9 @@
 				});
 				// create solar systems
 				$('.solar-system').each(function() {
-					new SolarSystem(this);
+					var ss = new SolarSystem(this);
+					ss.spaceColor = $(this).closest('section').css('backgroundColor');
+					ss.draw();
 				});
 			});
 		</script>
@@ -34,7 +36,11 @@
 			
 		</section>
 		<section class="slide2">
-			
+			<p>
+				How have we lost our sense of wonder?<br />
+				<span class="large">Think about the sun..</span>
+			</p>
+			<div class="solar-system"></div>
 		</section>
 		<section class="slide3">
 			

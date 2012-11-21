@@ -27,8 +27,9 @@
  * ```
  * 
  * @param HTMLElement el The factoid element
+ * @param boolean isChild Whether this factoid is nested or not
  */
-function Factoid(el) {
+function Factoid(el, isChild) {
 
 	var self = this;
 
@@ -80,7 +81,7 @@ function Factoid(el) {
  */
 	function showFactoids(factElement) {
 		$(factElement).siblings('.factoid').show();
-		$(factElement).siblings('.factoid').children('canvas').show();
+		$(factElement).siblings('.factoid').children('.hitspot').show();
 	}
 
 /**
@@ -118,7 +119,11 @@ function Factoid(el) {
  * 
  * @param HTMLElement el The factoid element
  */
-	function init(el) {
+	function init(el, isChild) {
+		if (typeof isChild === 'undefined') {
+			isChild = false;
+		}
+		
 		element = $(el);
 		
 		// draw circles
@@ -133,6 +138,7 @@ function Factoid(el) {
 		context.stroke();
 		
 		$(canvasElement)
+			.addClass('hitspot')
 			.css('cursor', 'pointer')
 			.click(self.click);
 
@@ -142,9 +148,17 @@ function Factoid(el) {
 		fact.data('text', fact.text());
 		fact.empty();
 		
-		element.find('.fact, .factoid').hide();
+		element.children('.fact').hide();
+		
+		if (isChild) {
+			$(canvasElement).hide();
+		}
+		
+		element.children('.factoid').each(function() {
+			new Factoid(this, true);
+		});
 	}
 
-	init(el);
+	init(el, isChild);
 
 }

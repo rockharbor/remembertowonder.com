@@ -1,0 +1,8 @@
+.factoid {
+	position: relative;
+}
+
+.factoid .fact,
+.factoid .hitspot {
+	position: absolute;
+}

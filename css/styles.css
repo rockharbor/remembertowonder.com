@@ -1,8 +1,71 @@
+/*= Slides
+************************************/
+.experience section {
+	position: relative;
+	height: 800px;
+}
+
+.slide1 {
+	background: #00161E;
+}
+
+.slide2 {
+	background: #002D4C;
+}
+
+.slide3 {
+	background: #003E60;
+}
+
+.slide4 {
+	background: #015072;
+}
+
+.slide5 {
+	background: #03698C;
+}
+
+.slide6 {
+	background: #0097BA;
+}
+
+.slide7 {
+	background: #00ABD3;
+}
+
+.slide8 {
+	background: #AD7045;
+}
+
+.slide9 {
+	background: #BE8D6B;
+}
+
+.slide10 {
+	background: #CCA58A;
+}
+
+.slide11 {
+	background: #D3B29B;
+}
+
+.slide12 {
+	background: #DFC7B7;
+}
+
+/*= Factoids
+************************************/
 .factoid {
 	position: relative;
 }
 
 .factoid .fact,
 .factoid .hitspot {
+	position: absolute;
+}
+
+/*= Solar System
+************************************/
+.solar-system canvas {
 	position: absolute;
 }

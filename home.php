@@ -62,7 +62,13 @@
 			</article>
 		</section>
 		<section class="slide4">
-			
+			<article>
+				<p>
+					How have we lost our sense of wonder?<br />
+					<span class="large">Think about the earth..</span>
+				</p>
+				<div class="solar-system"></div>
+			</article>
 		</section>
 		<section class="slide5">
 			

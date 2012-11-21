@@ -45,7 +45,21 @@
 			</article>
 		</section>
 		<section class="slide3">
-			
+			<article>
+				<div class="factoid f1"><p class="fact">The temperature on its surface is 10,000 degrees.</p></div>
+				<div class="factoid f2"><p class="fact">Its pressure is 340,000,000 times greater than the earths at sea level.</p></div>
+				<div class="factoid f3"><p class="fact">At its core, it is a paltry 27,000,000 degrees.</p></div>
+				<div class="factoid f4">
+					<p class="fact">Its estimated mass is 220 duodecillion pounds. Never heard of a duodecillion?</p>
+					<div class="factoid f5">
+						<p class="fact">
+							It's the 14th type of &quot;illion&quot; after million, billion, trillion, ..., etc.<br />
+							22,000,000,000,000,000,000,000,000,000,000,000,000,000
+						</p>
+					</div>
+				</div>
+				<div class="solar-system"></div>
+			</article>
 		</section>
 		<section class="slide4">
 			

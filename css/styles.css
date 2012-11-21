@@ -66,6 +66,69 @@
 	background: #003E60;
 }
 
+.slide3 .solar-system {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -400px;
+	margin-left: -400px;
+	width: 800px;
+	height: 800px;
+}
+
+.slide3 .factoid.f1 {
+	left: 90px;
+	top: 179px;
+}
+
+.slide3 .factoid.f1 .hitspot {
+	left: 424px;
+	top: 173px;
+}
+
+.slide3 .factoid.f2 {
+	width: 500px;
+	left: 600px;
+	top: 290px;
+}
+
+.slide3 .factoid.f2 .hitspot {
+	left: 29px;
+	top: 77px;
+}
+
+.slide3 .factoid.f3 {
+	left: 620px;
+	top: 626px;
+}
+
+.slide3 .factoid.f3 .hitspot {
+	left: -100px;
+	top: -200px;
+}
+
+.slide3 .factoid.f4 {
+	width: 300px;
+	left: 122px;
+	top: 615px;
+}
+
+.slide3 .factoid.f4 .hitspot {
+	left: 360px;
+	top: -240px;
+}
+
+.slide3 .factoid.f5 {
+	width: 550px;
+	left: 360px;
+	top: 60px;
+}
+
+.slide3 .factoid.f5 .hitspot {
+	top: -10px;
+	left: -50px;
+}
+
 .slide4 {
 	background: #015072;
 }

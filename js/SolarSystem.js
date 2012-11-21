@@ -147,18 +147,9 @@ function SolarSystem(el) {
 	}
 	
 	/**
-	 * Initializes the solar system, including creating orbits and planets
-	 *
-	 * @param HTMLElement el The system's container
+	 * Draws space, sun, and orbits
 	 */
-	function init(el) {
-		container = el;
-		canvasElement = document.createElement('canvas');
-		canvasElement.width = container.clientWidth;
-		canvasElement.height = container.clientHeight;
-		container.appendChild(canvasElement);
-		context = canvasElement.getContext('2d');
-		
+	this.draw = function() {
 		var width = canvasElement.width;
 		var height = canvasElement.height;
 		
@@ -193,16 +184,34 @@ function SolarSystem(el) {
 			context.stroke();
 			
 			// let there be `document.write(planetName)`!
-			p.planet = new Planet(self);
-			with (p.planet) {
-				color = p.color;
-				name = planetName;
-				oDist = p.oDist;
-				earthYears = p.earthYears;
-				size = p.size;
-				orbit();
+			if (typeof p.planet === 'undefined') {
+				p.planet = new Planet(self);
+				with (p.planet) {
+					color = p.color;
+					name = planetName;
+					oDist = p.oDist;
+					earthYears = p.earthYears;
+					size = p.size;
+					orbit();
+				}
 			}
 		}
+	}
+	
+	/**
+	 * Initializes the solar system, including creating orbits and planets
+	 *
+	 * @param HTMLElement el The system's container
+	 */
+	function init(el) {
+		container = el;
+		canvasElement = document.createElement('canvas');
+		canvasElement.width = container.clientWidth;
+		canvasElement.height = container.clientHeight;
+		container.appendChild(canvasElement);
+		context = canvasElement.getContext('2d');
+		
+		self.draw();
 	}
 	
 	// big bang

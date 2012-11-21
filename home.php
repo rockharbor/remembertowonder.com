@@ -36,11 +36,13 @@
 			
 		</section>
 		<section class="slide2">
-			<p>
-				How have we lost our sense of wonder?<br />
-				<span class="large">Think about the sun..</span>
-			</p>
-			<div class="solar-system"></div>
+			<article>
+				<p>
+					How have we lost our sense of wonder?<br />
+					<span class="large">Think about the sun..</span>
+				</p>
+				<div class="solar-system"></div>
+			</article>
 		</section>
 		<section class="slide3">
 			

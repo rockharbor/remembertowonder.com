@@ -71,7 +71,14 @@
 			</article>
 		</section>
 		<section class="slide5">
-			
+			<article>
+				<div class="factoid f1">
+					<p class="fact">It sits about 93,000,000 miles from the sun.</p>
+					<div class="factoid f2"><p class="fact">A minor decrease in that distance and the effect is catastrophic. Glaciers would melt. Most of our cities would flood. Ocean area would increase before potentially boiling and evaporating entirely.</p></div>
+				</div>
+				<div class="factoid f3"><p class="fact">Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p></div>
+				<div class="factoid f4"><p class="fact">A minor increase in that distance and the effect is also catastrophic. More glaciers means more reflection of the sun&apos;s heat. Colder ocean temperatures would trap and dissolve much of the atmosphere&apos;s carbon dioxide. A decrease in the presence of CO<sub>2</sub> could drop temperatures devastatingly low.</p></div>
+			</article>
 		</section>
 		<section class="slide6">
 			

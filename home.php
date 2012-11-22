@@ -103,19 +103,19 @@
 				<div class="factoid f5"><p class="fact">And less than 10% has been explored by humans.</p></div>
 			</article>
 		</section>
-		<section class="slide8">
+		<section class="alternate slide8">
 			
 		</section>
-		<section class="slide9">
+		<section class="alternate slide9">
 			
 		</section>
-		<section class="slide10">
+		<section class="alternate slide10">
 			
 		</section>
-		<section class="slide11">
+		<section class="alternate slide11">
 			
 		</section>
-		<section class="slide12">
+		<section class="alternate slide12">
 			
 		</section>
 	</body>

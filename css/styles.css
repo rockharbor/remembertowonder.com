@@ -19,8 +19,17 @@
 	font-size: 30px;
 }
 
-.large {
+.experience span.large {
 	font-size: 50px;
+}
+
+.experience .alternate p {
+	font-family: 'strangelove_textregular';
+	font-size: 50px;
+}
+
+.experience .alternate span.large {
+	font-size: 80px;
 }
 
 .factoid {

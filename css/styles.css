@@ -339,6 +339,71 @@
 	background: #D3B29B;
 }
 
+.slide11 .factoid.f1 {
+	width: 300px;
+	left: 590px;
+	top: 168px;
+}
+
+.slide11 .factoid.f1 .hitspot {
+	left: -55px;
+	top: 40px;
+}
+
+.slide11 .factoid.f2 {
+	width: 300px;
+	left: 628px;
+	top: 245px;
+}
+
+.slide11 .factoid.f2 .hitspot {
+	left: -40px;
+	top: 40px;
+}
+
+.slide11 .factoid.f3 {
+	width: 400px;
+	left: 552px;
+	top: 90px;
+}
+
+.slide11 .factoid.f3 .hitspot {
+	left: -50px;
+	top: 60px;
+}
+
+.slide11 .factoid.f4 {
+	width: 350px;
+	left: 52px;
+	top: 270px;
+}
+
+.slide11 .factoid.f4 .hitspot {
+	left: 400px;
+	top: -70px;
+}
+
+.slide11 .factoid.f5 {
+	left: 68px;
+	top: 520px;
+}
+
+.slide11 .factoid.f5 .hitspot {
+	left: 340px;
+	top: -70px;
+}
+
+.slide11 .factoid.f6 {
+	width: 700px;
+	left: 250px;
+	top: 600px;
+}
+
+.slide11 .factoid.f6 .hitspot {
+	left: 350px;
+	top: -60px;
+}
+
 .slide12 {
 	background: #DFC7B7;
 }

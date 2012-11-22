@@ -127,7 +127,14 @@
 			</article>
 		</section>
 		<section class="alternate slide11">
-			
+			<article>
+				<div class="factoid f1"><p class="fact">There are over 100,000,000,000,000 cells in your body.</p></div>
+				<div class="factoid f2"><p class="fact">Your heart pumps nearly 2,000 gallons of blood through your body each day.</p></div>
+				<div class="factoid f3"><p class="fact">If you&apos;re like the average person, you have more than 100,000 hair follicles on their head.</p></div>
+				<div class="factoid f4"><p class="fact">If you live the average lifespan, you will produce enough saliva to fill more than 2 swimming pools.</p></div>
+				<div class="factoid f5"><p class="fact">You use 200 muscles to take one step.</p></div>
+				<div class="factoid f6"><p class="fact">A new human is born every .25 seconds. In the amount of time it takes you to read these two sentences, 20 new people have entered the world. </p></div>
+			</article>
 		</section>
 		<section class="alternate slide12">
 			

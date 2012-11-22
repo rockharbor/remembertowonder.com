@@ -137,7 +137,12 @@
 			</article>
 		</section>
 		<section class="alternate slide12">
-			
+			<article>
+				<p>
+					How have we lost our sense of WONDER...<br />
+					<span class="large">...when it&apos;s all around us?</span>
+				</p>
+			</article>
 		</section>
 	</body>
 </html>

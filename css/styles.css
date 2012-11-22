@@ -408,6 +408,13 @@
 	background: #DFC7B7;
 }
 
+.slide12 p {
+	z-index: 10;
+	position: absolute;
+	left: 334px;
+	top: 150px
+}
+
 /*= Factoids
 ************************************/
 .factoid {

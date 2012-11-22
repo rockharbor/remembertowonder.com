@@ -278,6 +278,13 @@
 	background: #AD7045;
 }
 
+.slide8 p {
+	z-index: 10;
+	position: absolute;
+	left: 334px;
+	top: 150px
+}
+
 .slide9 {
 	background: #BE8D6B;
 }

@@ -89,7 +89,19 @@
 			</article>
 		</section>
 		<section class="slide7">
-			
+			<article>
+				<div class="factoid f1"><p class="fact">At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p></div>
+				<div class="factoid f2"><p class="fact">If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p></div>
+				<div class="factoid f3">
+					<p class="fact">A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
+					<div class="factoid f4">
+						<p class="fact">
+							It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.
+						</p>
+					</div>
+				</div>
+				<div class="factoid f5"><p class="fact">And less than 10% has been explored by humans.</p></div>
+			</article>
 		</section>
 		<section class="slide8">
 			

@@ -328,6 +328,13 @@
 	background: #CCA58A;
 }
 
+.slide10 p {
+	z-index: 10;
+	position: absolute;
+	left: 334px;
+	top: 150px
+}
+
 .slide11 {
 	background: #D3B29B;
 }

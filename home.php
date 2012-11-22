@@ -112,7 +112,11 @@
 			</article>
 		</section>
 		<section class="alternate slide9">
-			
+			<article>
+				<div class="factoid f1"><p class="fact">For every human on earth, there are 1,000,000 ants.</p></div>
+				<div class="factoid f2"><p class="fact">China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p></div>
+				<div class="factoid f3"><p class="fact">Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p></div>
+			</article>
 		</section>
 		<section class="alternate slide10">
 			

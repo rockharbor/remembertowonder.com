@@ -46,6 +46,10 @@
 	border: 1px solid #002D4C;
 }
 
+.alternate .factoid p {
+	font-size: 30px;
+}
+
 /*= Slides
 ************************************/
 .slide1 {
@@ -287,6 +291,37 @@
 
 .slide9 {
 	background: #BE8D6B;
+}
+
+.slide9 .factoid.f1 {
+	left: 156px;
+	top: 207px;
+}
+
+.slide9 .factoid.f1 .hitspot {
+	left: -25px;
+	top: -18px;
+}
+
+.slide9 .factoid.f2 {
+	left: 95px;
+	top: 338px;
+}
+
+.slide9 .factoid.f2 .hitspot {
+	left: 0;
+	top: -100px;
+}
+
+.slide9 .factoid.f3 {
+	width: 500px;
+	left: 288px;
+	top: 453px;
+}
+
+.slide9 .factoid.f3 .hitspot {
+	left: -170px;
+	top: 70px;
 }
 
 .slide10 {

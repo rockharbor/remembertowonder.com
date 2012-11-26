@@ -72,8 +72,8 @@ function Factoid(el, isChild) {
 		var hit = $(factoidElement).children('.hitspot');
 		
 		var pos = $(hit).position();
-		line.width = Math.abs(pos.left) + hit.width() / 2;
-		line.height = Math.abs(pos.top) + hit.height() / 2;
+		line.width = Math.abs(pos.left) + hit.width() / 2 + 1;
+		line.height = Math.abs(pos.top) + hit.height() / 2 + 1;
 		
 		$(line).data('start-x', line.width);
 		$(line).data('start-y', line.height);

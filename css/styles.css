@@ -57,6 +57,14 @@
 	background: #00161E;
 }
 
+#shooting-stars {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
 .slide2 {
 	background: #002D4C;
 }

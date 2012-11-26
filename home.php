@@ -12,6 +12,8 @@
 		<script src="<?php echo $url['base']; ?>/js/SolarSystem.js"></script>
 		<script src="<?php echo $url['base']; ?>/js/Planet.js"></script>
 		<script src="<?php echo $url['base']; ?>/js/Factoid.js"></script>
+		<script src="<?php echo $url['base']; ?>/js/ShootingStar.js"></script>
+		<script src="<?php echo $url['base']; ?>/js/triggers.js"></script>
 		<script>
 			$(document).ready(function() {
 				// setup timeline
@@ -28,12 +30,22 @@
 					ss.spaceColor = $(this).closest('section').css('backgroundColor');
 					ss.draw();
 				});
+				// create timeline triggers
+				var slide1 = new Slide1();
+				$('body').timeline('trigger', 800, function(event) {
+					if (event.direction === 'down') {
+						slide1.endStars();
+					} else {
+						slide1.startStars();
+					}
+				});
+				slide1.startStars();
 			});
 		</script>
 	</head>
 	<body class="experience">
 		<section class="slide1">
-			
+			<canvas id="shooting-stars"></canvas>
 		</section>
 		<section class="slide2">
 			<article>

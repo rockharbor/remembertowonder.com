@@ -23,11 +23,12 @@ function SolarSystem(el) {
 	this.yearLength = 10;
 	
 	/**
-	 * The color of space, that is, the background of the solar system
+	 * The color of space, that is, the background of the solar system. Use
+	 * `false` for none.
 	 *
 	 * @var string
 	 */
-	this.spaceColor = '#fff';
+	this.spaceColor = false;
 	
 	var self = this;
 	
@@ -159,8 +160,10 @@ function SolarSystem(el) {
 		}
 		
 		// draw space
-		context.fillStyle = self.spaceColor;
-		context.fillRect(0, 0, canvasElement.width, canvasElement.height);
+		if (self.spaceColor !== false) {
+			context.fillStyle = self.spaceColor;
+			context.fillRect(0, 0, canvasElement.width, canvasElement.height);
+		}
 		
 		// draw sun
 		context.beginPath();

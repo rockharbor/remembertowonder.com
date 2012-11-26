@@ -51,9 +51,105 @@ function Factoid(el, isChild) {
 			return;
 		}
 		
-		fact.empty();
-		fact.show();
-		setTimeout(showChar, 10, fact, 0, showFactoids);
+		var line = createLine(element);
+		drawLine(line, function(factoidElement) {
+			var fact = $(factoidElement).children('.fact');
+			fact.empty();
+			fact.show();
+			setTimeout(showChar, 10, fact, 0, showFactoids);
+		});
+		
+	}
+
+/**
+ * Positions the line canvas based on its factoid hitspot and the fact it's
+ * drawing to
+ *
+ * @param HTMLElement factoidElement The factoid
+ */
+	function createLine(factoidElement) {
+		var line = $(factoidElement).children('.line')[0];
+		var hit = $(factoidElement).children('.hitspot');
+		
+		var pos = $(hit).position();
+		line.width = Math.abs(pos.left) + hit.width() / 2;
+		line.height = Math.abs(pos.top) + hit.height() / 2;
+		
+		$(line).data('start-x', line.width);
+		$(line).data('start-y', line.height);
+		var left = 0;
+		var top = 0;
+		
+		if (pos.left < 0) {
+			line.width -= hit.width();
+			$(line).data('start-x', 0);
+			left = pos.left + hit.width() / 2;
+		}
+		if (pos.top < 0) {
+			line.height -= hit.height();
+			$(line).data('start-y', 0);
+			top = pos.top + hit.height() / 2;
+		}
+		
+		$(line).css({
+			position: 'absolute',
+			display: 'block',
+			left: left,
+			top: top
+		});
+		
+		$(line).show();
+		
+		return line;
+	}
+
+/**
+ * Draws the line, frame by frame. Algebraic!
+ *
+ * @param HTMLElement line The line canvas
+ * @param Function callback Callback for when animation is finished
+ */
+	function drawLine(line, callback) {
+		var start = {
+			x: $(line).data('start-x'),
+			y: $(line).data('start-y')
+		}
+		var end = {
+			x: start.x > 0 ? 0 : line.width,
+			y: start.y > 0 ? 0 : line.height
+		};
+		var pos = {
+			x: start.x,
+			y: start.y
+		};
+		var length = Math.sqrt(Math.pow(line.width, 2) + Math.pow(line.height, 2));
+		var speed = .5;
+		
+		var rads = Math.atan(line.width / line.height);
+	
+		var dl = length / (speed * 60);
+		var dx = Math.sin(rads) * dl * (pos.x > 0 ? -1 : 1);
+		var dy = Math.cos(rads) * dl * (pos.y > 0 ? -1 : 1);
+		var context = line.getContext('2d');
+		
+		// actual animation function called frame-by-frame
+		var animate = function() {	
+		line.width = line.width;
+			
+			pos.x += dx;
+			pos.y += dy;
+			
+			context.moveTo(start.x, start.y);
+			context.lineTo(pos.x, pos.y);
+			context.stroke();
+			if (Math.round(pos.x) === Math.round(end.x) && Math.round(pos.y) === Math.round(end.y)) {
+				callback.apply(this, [$(line).parent('.factoid')]);
+			} else {
+				requestAnimationFrame(animate);
+			}
+		};
+		
+		requestAnimationFrame(animate);
 	}
 
 /**
@@ -106,6 +202,7 @@ function Factoid(el, isChild) {
 		// hide this fact
 		delay += 500;
 		$(element).children('.fact').delay(delay).fadeOut();
+		$(element).children('.line').delay(delay).fadeOut();
 		if (hideButton) {
 			$(element).children('canvas').delay(delay).fadeOut();
 		}
@@ -141,7 +238,16 @@ function Factoid(el, isChild) {
 			.addClass('hitspot')
 			.css('cursor', 'pointer')
 			.click(self.click);
+		
+		// add 'line' canvas (assumes hitspot is what's positioned)
+		var lineCanvas = document.createElement('canvas');
+		
+		$(lineCanvas)
+			.addClass('line')
+			.css('z-index', 10)
+			.hide();
 
+		element.prepend(lineCanvas);
 		element.prepend(canvasElement);
 		
 		var fact = element.children('.fact');

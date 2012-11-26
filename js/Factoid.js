@@ -39,6 +39,24 @@ function Factoid(el, isChild) {
  * @var HTMLElement
  */
 	var element;
+	
+/**
+ * Callback triggered after the hitspot is clicked. Can be overridden on this
+ * object or set via `data-factoid-afterClick` parameter on the factoid.
+ */
+	this.afterClick = function() {}
+	
+/**
+ * Callback triggered after the fact is shown. Can be overridden on this
+ * object or set via `data-factoid-afterShow` parameter on the factoid.
+ */
+	this.afterShow = function() {}
+
+/**
+ * Callback triggered after the fact is hidden. Can be overridden on this
+ * object or set via `data-factoid-afterHide` parameter on the factoid.
+ */
+	this.afterHide = function() {}
 
 /**
  * Click callback (for hitspot)
@@ -47,18 +65,23 @@ function Factoid(el, isChild) {
 		var fact = element.children('.fact');
 		
 		if (fact.is(':visible')) {
-			hideFactoid(element);
+			hideFactoid.apply(this, [element]);
 			return;
 		}
 		
 		var line = createLine(element);
+		var self = this;
 		drawLine(line, function(factoidElement) {
 			var fact = $(factoidElement).children('.fact');
 			fact.empty();
 			fact.show();
-			setTimeout(showChar, 10, fact, 0, showFactoids);
+			setTimeout(showChar, 10, fact, 0, function() {
+				fact.siblings('.factoid').show();
+				fact.siblings('.factoid').children('.hitspot').show();
+				self.afterShow.apply(self);
+			});
 		});
-		
+		this.afterClick.apply(this);
 	}
 
 /**
@@ -175,16 +198,6 @@ function Factoid(el, isChild) {
 	}
 
 /**
- * Shows a factoid
- * 
- * @param HTMLElement factElement The fact element
- */
-	function showFactoids(factElement) {
-		$(factElement).siblings('.factoid').show();
-		$(factElement).siblings('.factoid').children('.hitspot').show();
-	}
-
-/**
  * Hides a factoid, along with its children.
  * 
  * @param HTMLElement element The factoid element
@@ -199,8 +212,9 @@ function Factoid(el, isChild) {
 		}
 		
 		// hide visible children first, increasing the delay
+		var self = this;
 		$(element).children('.factoid:visible').each(function() {
-			delay = hideFactoid(this, delay, true);
+			delay = hideFactoid.apply(self, [this, delay, true]);
 		});
 		
 		// hide this fact
@@ -208,7 +222,9 @@ function Factoid(el, isChild) {
 		$(element).children('.fact').delay(delay).fadeOut();
 		$(element).children('.line').delay(delay).fadeOut();
 		if (hideButton) {
-			$(element).children('canvas').delay(delay).fadeOut();
+			$(element).children('canvas').delay(delay).fadeOut(function() {
+				self.afterHide.apply(self);
+			});
 		}
 		
 		// chain the delay
@@ -241,7 +257,9 @@ function Factoid(el, isChild) {
 		$(canvasElement)
 			.addClass('hitspot')
 			.css('cursor', 'pointer')
-			.click(self.click);
+			.click(function() {
+				self.click.apply(self);
+			});
 		
 		// add 'line' canvas (assumes hitspot is what's positioned)
 		var lineCanvas = document.createElement('canvas');
@@ -262,6 +280,21 @@ function Factoid(el, isChild) {
 		
 		if (isChild) {
 			$(canvasElement).hide();
+		}
+		
+		var callbacks = ['afterClick', 'afterShow', 'afterHide'];
+		for (var callback in callbacks) {
+			var c = callbacks[callback];
+			var camelCase = c.charAt(0).toUpperCase() + c.substr(1);
+			if (typeof element.data('factoid'+camelCase) !== 'undefined') {
+				var cb = element.data('factoid'+camelCase);
+				var cbObject = window[cb];
+				if (cb.indexOf('.') !== -1) {
+					var cbSplit = cb.split('.');
+					cbObject = window[cbSplit[0]][cbSplit[1]];
+				}
+				self[c] = cbObject;
+			}
 		}
 		
 		element.children('.factoid').each(function() {

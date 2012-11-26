@@ -125,6 +125,10 @@ function Factoid(el, isChild) {
 		var length = Math.sqrt(Math.pow(line.width, 2) + Math.pow(line.height, 2));
 		var speed = .5;
 		
+		if (length < 100) {
+			speed = .25;
+		}
+		
 		var rads = Math.atan(line.width / line.height);
 	
 		var dl = length / (speed * 60);
@@ -134,7 +138,7 @@ function Factoid(el, isChild) {
 		
 		// actual animation function called frame-by-frame
 		var animate = function() {	
-		line.width = line.width;
+			line.width = line.width;
 			
 			pos.x += dx;
 			pos.y += dy;

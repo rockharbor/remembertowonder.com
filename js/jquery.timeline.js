@@ -136,22 +136,32 @@
 					};
 					
 					event.direction = scrollY - lastScrollY  > 0 ? 'down' : 'up';
+					event.relativeScroll = scrollY - t.range[0];
 					
 					// check if we're in the range
 					if (t.type === 'range' && scrollY > t.range[0] && scrollY < t.range[1]) {
-						event.relativeScroll = scrollY - t.range[0];
 						event.percent = event.relativeScroll / (t.range[1] - t.range[0]);
 						triggered.push(JSON.stringify(event));
 						t.callback.apply(this, [event]);
-					} else if (t.type === 'single' && t.triggered == false) {
-						event.relativeScroll = scrollY - t.range;
-						// check if we passed the trigger
-						if (event.direction === 'down') {
-							if (t.range[0] >= lastScrollY) {
-								triggered.push(JSON.stringify(event));
-								t.callback.apply(this, [event]);
-								t.triggered = true;
-							}
+					} else if (t.type === 'single') {
+						// padding in which to trigger single events (necessary
+						// for non-smooth scrolling to trigger single events)
+						var padding = 105;
+						var within = scrollY > t.range[0] - padding
+							&& scrollY < t.range[0] + padding
+							
+						if (!within) {
+							// reset so it can be triggered again when we're
+							// within the threshold
+							t.triggered = false;
+							continue;
+						}
+						
+						// if we haven't triggered this event, do it now
+						if (!t.triggered) {
+							triggered.push(JSON.stringify(event));
+							t.callback.apply(this, [event]);
+							t.triggered = true;
 						}
 					}
 				}

@@ -47,6 +47,16 @@
 				
 				slide7 = new Slide7();
 				
+				slide8 = new Slide8();
+				$('body').timeline('trigger', $('.slide8').offset().top, function(event) {
+					event.direction === 'down' ? slide8.showTrees() : slide8.hideTrees();
+				});
+				$('body').timeline('trigger', $('.slide8').offset().top + 800, function(event) {
+					event.direction === 'down' ? slide8.hideTrees() : slide8.showTrees();
+				});
+				
+				slide9 = new Slide9();
+				
 				// create factoids
 				$('article > .factoid').each(function() {
 					new Factoid(this);
@@ -61,14 +71,6 @@
 						'background-position': '50% 50%',
 						'background-size': '100%'
 					});
-				});
-				
-				slide8 = new Slide8();
-				$('body').timeline('trigger', $('.slide8').offset().top, function(event) {
-					event.direction === 'down' ? slide8.showTrees() : slide8.hideTrees();
-				});
-				$('body').timeline('trigger', $('.slide8').offset().top + 800, function(event) {
-					event.direction === 'down' ? slide8.hideTrees() : slide8.showTrees();
 				});
 			});
 		</script>
@@ -177,9 +179,14 @@
 		</section>
 		<section class="alternate slide9">
 			<article>
-				<div class="factoid f1"><p class="fact">For every human on earth, there are 1,000,000 ants.</p></div>
-				<div class="factoid f2"><p class="fact">China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p></div>
-				<div class="factoid f3"><p class="fact">Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p></div>
+				<img class="human" src="<?php echo $url['base']; ?>/img/somedude.png" alt="Human" />
+				<div class="ants"></div>
+				<div class="factoid f1" data-factoid-after-show="slide9.showAnts" data-factoid-after-hide="slide9.hideAnts"><p class="fact">For every human on earth, there are 1,000,000 ants.</p></div>
+				<img class="flag" src="<?php echo $url['base']; ?>/img/chinese-flag.png" alt="Chinese Flag" />
+				<div class="goats"></div>
+				<div class="factoid f2" data-factoid-after-show="slide9.showGoats" data-factoid-after-hide="slide9.hideGoats"><p class="fact">China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p></div>
+				<div class="pop"><div class="perc"></div></div>
+				<div class="factoid f3" data-factoid-after-show="slide9.showPop" data-factoid-after-hide="slide9.hidePop"><p class="fact">Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p></div>
 			</article>
 		</section>
 		<section class="alternate slide10">

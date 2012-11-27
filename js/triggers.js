@@ -207,3 +207,39 @@ function Slide8() {
 	}
 	
 }
+
+function Slide9() {
+	
+	$('.slide9 .ants').hide();
+	$('.slide9 .goats').hide();
+	$('.slide9 .pop').hide();
+	$('.slide9 .pop .perc').hide();
+	
+	this.showAnts = function() {
+		swipeIn($('.slide9 .ants'));
+	}
+	
+	this.hideAnts = function() {
+		swipeOut($('.slide9 .ants'));
+	}
+	
+	this.showGoats = function() {
+		swipeIn($('.slide9 .goats'));
+	}
+	
+	this.hideGoats = function() {
+		swipeOut($('.slide9 .goats'));
+	}
+	
+	this.showPop = function() {
+		$('.slide9 .pop').fadeIn(function() {
+			swipeIn($('.slide9 .pop .perc'));
+		});
+	}
+	
+	this.hidePop = function() {
+		swipeOut($('.slide9 .pop .perc'));
+		$('.slide9 .pop').fadeOut();
+	}
+	
+}

@@ -442,6 +442,23 @@
 	background: #BE8D6B;
 }
 
+.slide9 .human {
+	position: absolute;
+	left: 50px;
+	top: 40px;
+	width: 80px;
+}
+
+.slide9 .ants {
+	position: absolute;
+	top: 30px;
+	left: 170px;
+	width: 600px;
+	height: 200px;
+	
+	background: url('../img/ants.png') repeat-x;
+}
+
 .slide9 .factoid.f1 {
 	left: 156px;
 	top: 207px;
@@ -453,13 +470,29 @@
 }
 
 .slide9 .factoid.f2 {
-	left: 95px;
-	top: 338px;
+	left: 10px;
+	top: 400px;
 }
 
 .slide9 .factoid.f2 .hitspot {
 	left: 0;
 	top: -100px;
+}
+
+.slide9 .flag {
+	position: absolute;
+	left: 50px;
+	top: 290px;
+}
+
+.slide9 .goats {
+	position: absolute;
+	top: 290px;
+	left: 170px;
+	width: 600px;
+	height: 100px;
+	
+	background: url('../img/goat.png');
 }
 
 .slide9 .factoid.f3 {
@@ -471,6 +504,27 @@
 .slide9 .factoid.f3 .hitspot {
 	left: -170px;
 	top: 70px;
+}
+
+.slide9 .pop {
+	position: absolute;
+	width: 800px;
+	height: 200px;
+	left: 50%;
+	margin-left: -400px;
+	bottom: 20px;
+	
+	border: 1px solid #000000;
+}
+
+.slide9 .pop .perc {
+	position: absolute;
+	width: 120px;
+	height: 200px;
+	left: 0;
+	top: 0;
+	
+	background: #ffffff;
 }
 
 .slide10 {

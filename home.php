@@ -41,8 +41,13 @@
 				// create solar systems
 				$('.solar-system').each(function() {
 					var ss = new SolarSystem(this);
-					ss.spaceColor = $(this).closest('section').css('backgroundColor');
 					ss.draw();
+					$(this).css({
+						'background-image': 'url("<?php echo $url['base']; ?>/img/stars.png")',
+						'background-repeat': 'no-repeat',
+						'background-position': '50% 50%',
+						'background-size': '100%'
+					});
 				});
 			});
 		</script>

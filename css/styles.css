@@ -460,3 +460,8 @@
 .solar-system canvas {
 	position: absolute;
 }
+
+.solar-system {
+	background: url('../img/solar-system.png') no-repeat;
+	background-size: 100%;
+}

@@ -122,6 +122,16 @@
 	background: #003E60;
 }
 
+.slide3 .hint {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.slide3 .hint img {
+	display: inline;
+}
+
 .slide3 .solar-system {
 	position: absolute;
 	left: 50%;

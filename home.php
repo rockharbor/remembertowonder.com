@@ -78,6 +78,7 @@
 		</section>
 		<section class="slide3">
 			<article>
+				<p class="hint">Click the <img src="<?php echo $url['base']; ?>/img/circle.png" alt="circle" /> to see...</p>
 				<div class="factoid f1"><p class="fact">The temperature on its surface is 10,000 degrees.</p></div>
 				<div class="factoid f2"><p class="fact">Its pressure is 340,000,000 times greater than the earths at sea level.</p></div>
 				<div class="factoid f3"><p class="fact">At its core, it is a paltry 27,000,000 degrees.</p></div>

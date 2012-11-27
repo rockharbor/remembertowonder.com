@@ -147,3 +147,29 @@ function Slide5() {
 	}
 	
 }
+
+function Slide6() {
+	
+	this.active = false;
+	
+	this.startWaves = function() {
+		this.active = true;
+		this.animateWaves('.waves-foreground');
+	}
+	
+	this.endWaves = function() {
+		this.active = false;
+	}
+	
+	this.animateWaves = function(selector) {
+		var self = this;
+		$('.slide6 '+selector)
+			.animate({left:'-10%'}, 4000)
+			.animate({left: 0}, 4000, function() {
+				if (self.active) {
+					self.animateWaves(selector);
+				}
+			});
+	}
+	
+}

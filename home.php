@@ -37,6 +37,14 @@
 				
 				slide5 = new Slide5();
 				
+				slide6 = new Slide6();
+				$('body').timeline('trigger', $('.slide6').offset().top - 800, function(event) {
+					event.direction === 'down' ? slide6.startWaves() : slide6.endWaves();
+				});
+				$('body').timeline('trigger', $('.slide6').offset().top + 200, function(event) {
+					event.direction === 'down' ? slide6.endWaves() : slide6.startWaves();
+				});
+				
 				// create factoids
 				$('article > .factoid').each(function() {
 					new Factoid(this);
@@ -117,6 +125,8 @@
 			</article>
 		</section>
 		<section class="slide6">
+			<div class="waves-foreground"></div>
+			<div class="waves-background"></div>
 			<article>
 				<p>
 					How have we lost our sense of wonder?<br />

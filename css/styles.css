@@ -282,7 +282,32 @@
 }
 
 .slide6 {
-	background: #0097BA;
+	background: #0081a9;
+}
+
+.slide6 .waves-foreground {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 200px;
+	width: 110%;
+	
+	background-color: #0097BA;
+	background-image: url('../img/waves-white.png');
+	background-repeat: repeat-x;
+	background-position-y: 100%;
+}
+
+.slide6 .waves-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 110%;
+	
+	background-image: url('../img/waves-blue.png');
+	background-repeat: repeat-x;
+	background-position-y: 145px;
 }
 
 .slide6 p {

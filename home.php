@@ -57,6 +57,14 @@
 				
 				slide9 = new Slide9();
 				
+				slide10 = new Slide10();
+				$('body').timeline('trigger', $('.slide10').offset().top, function(event) {
+					event.direction === 'down' ? slide10.showBubble() : slide10.hideBubble();
+				});
+				$('body').timeline('trigger', $('.slide10').offset().top + 800, function(event) {
+					event.direction === 'down' ? slide10.hideBubble() : slide10.showBubble();
+				});
+				
 				// create factoids
 				$('article > .factoid').each(function() {
 					new Factoid(this);
@@ -72,6 +80,7 @@
 						'background-size': '100%'
 					});
 				});
+				
 			});
 		</script>
 	</head>
@@ -195,6 +204,9 @@
 					How have we lost our sense of wonder?<br />
 					<span class="large">Think about the human body...</span>
 				</p>
+				<img class="bubble" src="<?php echo $url['base']; ?>/img/bubble.png" />
+				<div class="human"></div>
+				<div class="ground"></div>
 			</article>
 		</section>
 		<section class="alternate slide11">

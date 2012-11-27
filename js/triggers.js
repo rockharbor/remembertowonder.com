@@ -243,3 +243,17 @@ function Slide9() {
 	}
 	
 }
+
+function Slide10() {
+	
+	$('.slide10 .bubble').hide();
+	
+	this.showBubble = function() {
+		$('.slide10 .bubble').fadeIn();
+	}
+	
+	this.hideBubble = function() {
+		$('.slide10 .bubble').fadeOut();
+	}
+	
+}

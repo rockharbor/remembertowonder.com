@@ -535,7 +535,29 @@
 	z-index: 10;
 	position: absolute;
 	left: 334px;
-	top: 150px
+	top: 100px
+}
+
+.slide10 .human {
+	position: absolute;
+	width: 100%;
+	height: 600px;
+	
+	background: url('../img/somedude.png') no-repeat 50% 100%;
+}
+
+.slide10 .bubble {
+	position: absolute;
+	left: 530px;
+	top: 230px;
+}
+
+.slide10 .ground {
+	position: absolute;
+	width: 100%;
+	height: 580px;
+	
+	border-bottom: 2px solid #ffffff;
 }
 
 .slide11 {

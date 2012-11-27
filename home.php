@@ -26,11 +26,14 @@
 				$('body').timeline('trigger', 800, function(event) {
 					if (event.direction === 'down') {
 						slide1.endStars();
+						slide1.endNag();
 					} else {
+						slide1.startNag();
 						slide1.startStars();
 					}
 				});
 				slide1.startStars();
+				slide1.startNag();
 				
 				slide5 = new Slide5();
 				
@@ -54,7 +57,15 @@
 	</head>
 	<body class="experience">
 		<section class="slide1">
-			<canvas id="shooting-stars"></canvas>
+			<article>
+				<img class="logo" src="<?php echo $url['base']; ?>/img/wonder-white.png" alt="Wonder" />
+				<p class="large">...is a lost art among us.</p>
+				<p>But how?</p>
+				<div class="arrow">
+					<img src="<?php echo $url['base']; ?>/img/arrow.png" alt="Scroll Down" />
+				</div>
+				<canvas id="shooting-stars"></canvas>
+			</article>
 		</section>
 		<section class="slide2">
 			<article>

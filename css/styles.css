@@ -19,7 +19,7 @@
 	font-size: 30px;
 }
 
-.experience span.large {
+.experience .large {
 	font-size: 50px;
 }
 
@@ -28,7 +28,7 @@
 	font-size: 50px;
 }
 
-.experience .alternate span.large {
+.experience .alternate .large {
 	font-size: 80px;
 }
 
@@ -54,7 +54,41 @@
 /*= Slides
 ************************************/
 .slide1 {
-	background: #00161E;
+	background-color: #00161E;
+}
+
+.slide1 {
+	background-image: 
+		url('../img/stars-topleft.png'),
+		url('../img/stars-topright.png'),
+		url('../img/stars-bottomright.png'),
+		url('../img/stars-bottomleft.png');
+	background-repeat: no-repeat;
+	background-position: 
+		top left,
+		top right,
+		bottom right,
+		bottom left;
+}
+
+.slide1 .logo {
+	margin-top: 80px;
+}
+
+.slide1 p {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.slide1 p.large {
+	margin-top: 30px;
+}
+
+.slide1 .arrow {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -6px;
 }
 
 #shooting-stars {

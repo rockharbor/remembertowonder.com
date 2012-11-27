@@ -97,6 +97,21 @@ function _swipeSetupElement(element) {
 function Slide1() {
 	this.active = true;
 	
+	var interval;
+	
+	this.startNag = function() {
+		this.endNag();
+		interval = setInterval(function() {
+			$('.slide1 .arrow')
+				.animate({bottom: 10})
+				.animate({bottom: 30})
+		}, 3000);
+	}
+	
+	this.endNag = function() {
+		clearInterval(interval);
+	}
+	
 	this.startStars = function() {
 		var self = this;
 		setTimeout(function() {

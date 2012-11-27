@@ -92,9 +92,8 @@ function _swipeSetupElement(element) {
 	return viewport;
 }
 
-/**
- * Slide 1 trigger functions
- */
+/*= Slide logic
+********************************************************/
 function Slide1() {
 	this.active = true;
 	
@@ -118,4 +117,18 @@ function Slide1() {
 			}, Math.random()*8000+3000)
 		}
 	}
+}
+
+function Slide5() {
+	
+	$('.slide5 .miles').hide();
+	
+	this.showMiles = function() {
+		swipeIn($('.slide5 .miles'));
+	}
+	
+	this.hideMiles = function() {
+		swipeOut($('.slide5 .miles'));
+	}
+	
 }

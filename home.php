@@ -20,6 +20,20 @@
 				$('body').timeline({
 					debug: true
 				});
+				
+				// create timeline triggers
+				slide1 = new Slide1();
+				$('body').timeline('trigger', 800, function(event) {
+					if (event.direction === 'down') {
+						slide1.endStars();
+					} else {
+						slide1.startStars();
+					}
+				});
+				slide1.startStars();
+				
+				slide5 = new Slide5();
+				
 				// create factoids
 				$('article > .factoid').each(function() {
 					new Factoid(this);
@@ -30,16 +44,6 @@
 					ss.spaceColor = $(this).closest('section').css('backgroundColor');
 					ss.draw();
 				});
-				// create timeline triggers
-				var slide1 = new Slide1();
-				$('body').timeline('trigger', 800, function(event) {
-					if (event.direction === 'down') {
-						slide1.endStars();
-					} else {
-						slide1.startStars();
-					}
-				});
-				slide1.startStars();
 			});
 		</script>
 	</head>
@@ -84,7 +88,10 @@
 		</section>
 		<section class="slide5">
 			<article>
-				<div class="factoid f1">
+				<img class="earth" src="<?php echo $url['base']; ?>/img/earth.png" alt="Earth" />
+				<img class="miles" src="<?php echo $url['base']; ?>/img/93millionmiles.png" alt="93 Million Miles" />
+				<img class="sun" src="<?php echo $url['base']; ?>/img/sun.png" alt="Sun" />
+				<div class="factoid f1" data-factoid-after-click="slide5.showMiles" data-factoid-after-hide="slide5.hideMiles">
 					<p class="fact">It sits about 93,000,000 miles from the sun.</p>
 					<div class="factoid f2"><p class="fact">A minor decrease in that distance and the effect is catastrophic. Glaciers would melt. Most of our cities would flood. Ocean area would increase before potentially boiling and evaporating entirely.</p></div>
 				</div>

@@ -62,6 +62,14 @@
 						'background-size': '100%'
 					});
 				});
+				
+				slide8 = new Slide8();
+				$('body').timeline('trigger', $('.slide8').offset().top, function(event) {
+					event.direction === 'down' ? slide8.showTrees() : slide8.hideTrees();
+				});
+				$('body').timeline('trigger', $('.slide8').offset().top + 800, function(event) {
+					event.direction === 'down' ? slide8.hideTrees() : slide8.showTrees();
+				});
 			});
 		</script>
 	</head>
@@ -161,6 +169,10 @@
 					How have we lost our sense of wonder?<br />
 					<span class="large">Think about the animal kingdom...</span>
 				</p>
+				<img class="trees trees1" src="<?php echo $url['base']; ?>/img/left-trees.png" alt="Trees!" />
+				<img class="trees trees2" src="<?php echo $url['base']; ?>/img/back-trees.png" alt="Trees!" />
+				<img class="trees trees3" src="<?php echo $url['base']; ?>/img/center-trees.png" alt="Trees!" />
+				<img class="trees trees4" src="<?php echo $url['base']; ?>/img/right-trees.png" alt="Trees!" />
 			</article>
 		</section>
 		<section class="alternate slide9">

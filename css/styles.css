@@ -410,6 +410,34 @@
 	top: 150px
 }
 
+.slide8 .trees {
+	display: none;
+}
+
+.slide8 .trees1 {
+	position: absolute;
+	left: 0px;
+	top: 600px;
+}
+
+.slide8 .trees2 {
+	position: absolute;
+	left: 470px;
+	top: 630px;
+}
+
+.slide8 .trees3 {
+	position: absolute;
+	left: 350px;
+	top: 620px;
+}
+
+.slide8 .trees4 {
+	position: absolute;
+	left: 620px;
+	top: 630px;
+}
+
 .slide9 {
 	background: #BE8D6B;
 }

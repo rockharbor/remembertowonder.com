@@ -190,3 +190,20 @@ function Slide7() {
 	}
 	
 }
+
+function Slide8() {
+	
+	this.showTrees = function() {
+		$('.slide8 .trees1').fadeIn(2000, function() {
+			$('.slide8 .trees3').fadeIn()
+		});
+		$('.slide8 .trees4').delay(1000).fadeIn(2000, function() {
+			$('.slide8 .trees2').fadeIn();
+		});
+	}
+	
+	this.hideTrees = function() {
+		$('.slide8 .trees').stop().clearQueue().fadeOut();
+	}
+	
+}

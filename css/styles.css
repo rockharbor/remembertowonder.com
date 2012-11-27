@@ -321,6 +321,23 @@
 	background: #00ABD3;
 }
 
+.slide7 .earth,
+.slide7 .pie,
+.slide7 .salt {
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	
+	width: 300px;
+	height: 300px;
+}
+
+.slide7 .pie,
+.slide7 .salt {
+	z-index: 2;
+	display: none;
+}
+
 .slide7 .factoid.f1 {
 	width: 300px;
 	left: 546px;
@@ -341,6 +358,12 @@
 .slide7 .factoid.f2 .hitspot {
 	left: -110px;
 	top: -65px;
+}
+
+.slide7 .beaker {
+	position: absolute;
+	top: 400px;
+	left: 120px;
 }
 
 .slide7 .factoid.f3 {

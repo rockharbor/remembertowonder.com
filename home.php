@@ -45,6 +45,8 @@
 					event.direction === 'down' ? slide6.endWaves() : slide6.startWaves();
 				});
 				
+				slide7 = new Slide7();
+				
 				// create factoids
 				$('article > .factoid').each(function() {
 					new Factoid(this);
@@ -136,8 +138,12 @@
 		</section>
 		<section class="slide7">
 			<article>
-				<div class="factoid f1"><p class="fact">At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p></div>
-				<div class="factoid f2"><p class="fact">If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p></div>
+				<img class="salt" src="<?php echo $url['base']; ?>/img/salt.png" alt="Salt" />
+				<img class="pie" src="<?php echo $url['base']; ?>/img/pie.png" alt="Pie Chart" />
+				<img class="earth" src="<?php echo $url['base']; ?>/img/earth.png" alt="Earth" />
+				<div class="factoid f1" data-factoid-after-show="slide7.showPie" data-factoid-after-click="slide7.hideAll" data-factoid-after-hide="slide7.hideAll"><p class="fact">At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p></div>
+				<div class="factoid f2" data-factoid-after-show="slide7.showSalt" data-factoid-after-click="slide7.hideAll" data-factoid-after-hide="slide7.hideAll"><p class="fact">If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p></div>
+				<img class="beaker" src="<?php echo $url['base']; ?>/img/beaker.png" alt="Beaker" />
 				<div class="factoid f3">
 					<p class="fact">A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
 					<div class="factoid f4">

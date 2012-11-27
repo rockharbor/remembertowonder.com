@@ -173,3 +173,20 @@ function Slide6() {
 	}
 	
 }
+
+function Slide7() {
+	
+	this.showSalt = function() {
+		$('.slide7 .salt').fadeIn();
+	}
+	
+	this.showPie = function() {
+		$('.slide7 .pie').fadeIn();
+	}
+	
+	this.hideAll = function() {
+		$('.slide7 .salt').fadeOut();
+		$('.slide7 .pie').fadeOut();
+	}
+	
+}

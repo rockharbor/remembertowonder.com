@@ -10,9 +10,20 @@
 		<script src="<?php echo $url['base']; ?>/js/jquery.timeline.js"></script>
 		<script>
 			$(document).ready(function() {
+				$('[data-z]').each(function() {
+					$(this).css({
+						transform: 'translate3d(0, 0, '+$(this).data('z')+'px)'
+					});
+				});
 				// setup timeline
 				$('body').timeline({
 					debug: true
+				});
+				// set up perspective change to always be where the user is
+				$('body').timeline('trigger', [0, $('.wrap')[0].scrollHeight], function(evt) {
+					$('.viewport').css({
+						'perspective-origin-y': $(window).scrollTop()
+					});
 				});
 			});
 		</script>

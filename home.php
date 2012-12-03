@@ -8,23 +8,11 @@
 		<link rel="stylesheet" href="<?php echo $url['base']; ?>/css/fonts.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="<?php echo $url['base']; ?>/js/jquery.timeline.js"></script>
-		<script src="<?php echo $url['base']; ?>/js/rAF.js"></script>
-		<script src="<?php echo $url['base']; ?>/js/SolarSystem.js"></script>
-		<script src="<?php echo $url['base']; ?>/js/Planet.js"></script>
-		<script src="<?php echo $url['base']; ?>/js/Factoid.js"></script>
 		<script>
 			$(document).ready(function() {
 				// setup timeline
 				$('body').timeline({
 					debug: true
-				});
-				// create factoids
-				$('article > .factoid').each(function() {
-					new Factoid(this);
-				});
-				// create solar systems
-				$('.solar-system').each(function() {
-					new SolarSystem(this);
 				});
 			});
 		</script>

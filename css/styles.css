@@ -52,20 +52,3 @@
 .slide12 {
 	background: #DFC7B7;
 }
-
-/*= Factoids
-************************************/
-.factoid {
-	position: relative;
-}
-
-.factoid .fact,
-.factoid .hitspot {
-	position: absolute;
-}
-
-/*= Solar System
-************************************/
-.solar-system canvas {
-	position: absolute;
-}

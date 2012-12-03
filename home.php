@@ -8,23 +8,42 @@
 		<link rel="stylesheet" href="<?php echo $url['base']; ?>/css/fonts.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="<?php echo $url['base']; ?>/js/jquery.timeline.js"></script>
+		<script src="<?php echo $url['base']; ?>/js/modernizr.custom.20540.js"></script>
 		<script>
 			$(document).ready(function() {
-				$('[data-z]').each(function() {
-					$(this).css({
-						transform: 'translate3d(0, 0, '+$(this).data('z')+'px)'
-					});
-				});
 				// setup timeline
 				$('body').timeline({
 					debug: true
 				});
-				// set up perspective change to always be where the user is
-				$('body').timeline('trigger', [0, $('.wrap')[0].scrollHeight], function(evt) {
-					$('.viewport').css({
-						'perspective-origin-y': $(window).scrollTop()
+				
+				if (Modernizr.csstransforms3d) {
+					$('[data-z]').each(function() {
+						$(this).css({
+							transform: 'translate3d(0, 0, '+$(this).data('z')+'px)'
+						});
 					});
-				});
+					// set up perspective to always be where the user is
+					$('body').timeline('trigger', [0, $('.wrap')[0].scrollHeight], function(evt) {
+						$('.viewport').css({
+							'perspective-origin-y': $(window).scrollTop()
+						});
+					});
+				} else {
+					$('[data-z]').each(function() {
+						// range being the vanishing point
+						var maxRange = 1000;
+						if ($(this).data('z') < 0) {
+							maxRange = -10000;
+						}
+						var fauxZScale = 1 + (maxRange - $(this).data('z')) / Math.abs(maxRange);
+						$(this).css({
+							zIndex: $(this).data('z'),
+							transform: 'scale('+fauxZScale+', '+fauxZScale+')'
+						});
+					});
+				}
+				
+				})
 			});
 		</script>
 	</head>

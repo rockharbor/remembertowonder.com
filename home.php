@@ -18,41 +18,19 @@
 		</script>
 	</head>
 	<body class="experience">
-		<section class="slide1">
-			
-		</section>
-		<section class="slide2">
-			
-		</section>
-		<section class="slide3">
-			
-		</section>
-		<section class="slide4">
-			
-		</section>
-		<section class="slide5">
-			
-		</section>
-		<section class="slide6">
-			
-		</section>
-		<section class="slide7">
-			
-		</section>
-		<section class="slide8">
-			
-		</section>
-		<section class="slide9">
-			
-		</section>
-		<section class="slide10">
-			
-		</section>
-		<section class="slide11">
-			
-		</section>
-		<section class="slide12">
-			
-		</section>
+		<div class="wrap">
+			<div class="viewport">
+				<section class="section-sun">
+					<p>Have you ever thought about the sun?</p>
+					<img class="sun" src="<?php echo img('sun.png'); ?>" />
+					<img class="sun-hot" src="<?php echo img('sun-hot.png'); ?>" />
+					<p>The temperature on its surface is 10,000 degrees.</p>
+					<p>At its core, it is a paltry 27,000,000 degrees.</p>
+					<p>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
+					<p>Its estimated mass is 220 duodecillion pounds.</p>
+					<p>And this sun is just one of about 200 billion stars in our universe.</p>
+				</section>
+			</div>
+		</div>
 	</body>
 </html>

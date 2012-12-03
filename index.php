@@ -63,6 +63,12 @@ function debug($obj) {
 	echo "<pre>$out</pre>";
 }
 
+function img($path) {
+	global $url;
+	$path = "{$url['base']}/img/$path";
+	return $path;
+}
+
 if (!file_exists($url['page'].'.php')) {
 	redirect('404');
 }

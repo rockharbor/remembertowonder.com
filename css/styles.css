@@ -121,3 +121,63 @@ html, body {
 .section-earth .earth.frozen {
 	opacity: 0;
 }
+
+/*= Ocean
+************************************/
+.section-ocean p {
+	position: absolute;
+	width: 200px;
+}
+
+.section-ocean h1 {
+	position: absolute;
+	width: 400px;
+	left: -200px;
+	
+	text-align: center;
+}
+
+.section-ocean .water:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 55px;
+	top: -55px;
+	
+	background-image: url('../img/waves-blue.png');
+	background-repeat: repeat-x;
+}
+
+.section-ocean .water {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	left: -50%;
+	overflow: visible;
+	
+	background-position-y: top;
+	background-color: #9ac0d3;
+}
+
+.section-ocean .land {
+	left: 30px;
+}
+
+.section-ocean .salt {
+	left: 30px;
+	
+	opacity: 0;
+}
+
+.section-ocean .beaker {
+	left: -257px;
+	top: 600px;
+	
+	opacity: 0;
+}
+
+.section-ocean .floor {
+	top: 2000px;
+	left: -1000px;
+}

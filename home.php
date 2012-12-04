@@ -43,6 +43,20 @@
 					});
 				}
 				
+				Earth = {
+					showFrozen: function() {
+						Earth.hide();
+						$('.section-earth .earth.frozen').animate({opacity: 1});
+					},
+					showCold: function() {
+						Earth.hide();
+						$('.section-earth .earth.cold').animate({opacity: 1});
+					},
+					hide: function() {
+						$('.section-earth .earth.cold, .section-earth .earth.frozen').animate({opacity: 0});
+					}
+				}
+				
 				$('[data-fade]').each(function() {
 					var el = this;
 					var pos = $(el).offset();
@@ -99,6 +113,16 @@
 					<p style="top: 1000px;" class="stickleft"  data-fade="true">Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
 					<p style="top: 1000px;" class="stickright"  data-fade="true">Its estimated mass is 220 duodecillion pounds.</p>
 					<p style="top: 1500px" class="stickcenter" data-fade="true" >And this sun is just one of about 200 billion stars in our universe.</p>
+				</section>
+				<section class="section-earth" style="height: 3000px">
+					<h1 data-fade="true">Have you ever thought about the earth?</h1>
+					<img data-z="-2500" class="earth" src="<?php echo img('earth.png'); ?>" />
+					<img data-z="-2500" class="earth cold" src="<?php echo img('earth-cold.png'); ?>" />
+					<img data-z="-2500" class="earth frozen" src="<?php echo img('earth-frozen.png'); ?>" />
+					<p style="top: 200px;" class="stickleft" data-fade="true">It sits about 93,000,000 miles from the sun.</p>
+					<p style="top: 200px;" class="stickright" data-fade='{"enter": "Earth.showFrozen"}'>A minor decrease in that distance and the effect is catastrophic. Glaciers would melt. Most of our cities would flood. Ocean area would increase before potentially boiling and evaporating entirely.</p>
+					<p style="top: 400px;" class="stickleft" data-fade='{"enter": "Earth.showCold"}'>A minor increase in that distance and the effect is also catastrophic. More glaciers means more reflection of the sun&apos;s heat. Colder ocean temperatures would trap and dissolve much of the atmosphere&apos;s carbon dioxide. A decrease in the presence of CO<sub>2</sub> could drop temperatures devastatingly low.</p>
+					<p style="top: 400px;" class="stickright" data-fade="true">Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p>
 				</section>
 			</div>
 		</div>

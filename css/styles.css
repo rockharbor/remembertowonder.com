@@ -49,7 +49,7 @@ html, body {
 	-webkit-transition: all 1s ease-in-out;
 }
 
-/*= Slides
+/*= Sun
 ************************************/
 .section-sun p {
 	position: absolute;
@@ -82,4 +82,42 @@ html, body {
 	width: 200px;
 	left: -100px;
 	top: 200px;
+}
+
+/*= Earth
+************************************/
+.section-earth p {
+	position: absolute;
+	width: 200px;
+}
+
+.section-earth h1 {
+	position: absolute;
+	width: 400px;
+	left: -200px;
+	
+	text-align: center;
+}
+
+.section-earth p.stickleft {
+	left: -250px; /*= width + 50px margin */
+}
+
+.section-earth p.stickright {
+	left: 50px; /*= 50px margin */
+}
+
+.section-earth p.stickcenter {
+	left: -100px; /*= -width/2 */
+}
+
+.section-earth .earth {
+	position: absolute;
+	left: -218.5px;
+	top: 1000px;
+}
+
+.section-earth .earth.cold,
+.section-earth .earth.frozen {
+	opacity: 0;
 }

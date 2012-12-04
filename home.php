@@ -28,9 +28,9 @@
 						});
 					});
 					// set up perspective to always be where the user is
-					$('body').timeline('trigger', [0, $('.wrap')[0].scrollHeight], function(evt) {
+					$(window).bind('scroll', function(e) {
 						$('.viewport').css({
-							'perspective-origin-y': $(window).scrollTop()
+							'perspective-origin': '0px '+$(window).scrollTop()+'px'
 						});
 					});
 				} else {

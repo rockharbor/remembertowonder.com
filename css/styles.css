@@ -48,3 +48,38 @@ html, body {
 	position: absolute;
 	-webkit-transition: all 1s ease-in-out;
 }
+
+/*= Slides
+************************************/
+.section-sun p {
+	position: absolute;
+	width: 200px;
+}
+
+.section-sun p.stickleft {
+	left: -250px; /*= width + 50px margin */
+}
+
+.section-sun p.stickright {
+	left: 50px; /*= 50px margin */
+}
+
+.section-sun p.stickcenter {
+	left: -100px; /*= -width/2 */
+}
+
+.section-sun .sun {
+	position: absolute;
+	left: -241px;
+	top: 1000px;
+}
+
+.section-sun .sun.hot {
+	display: none;
+}
+
+.section-sun p:first-child {
+	width: 200px;
+	left: -100px;
+	top: 200px;
+}

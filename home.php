@@ -9,8 +9,13 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="<?php echo $url['base']; ?>/js/jquery.timeline.js"></script>
 		<script src="<?php echo $url['base']; ?>/js/modernizr.custom.20540.js"></script>
+		<script src="<?php echo $url['base']; ?>/js/jquery.transit.min.js"></script>
 		<script>
 			$(document).ready(function() {
+				if (!$.support.transition) {
+					$.fn.transition = $.fn.animate;
+				}
+				
 				// setup timeline
 				$('body').timeline({
 					debug: true
@@ -46,29 +51,29 @@
 				Earth = {
 					showFrozen: function() {
 						Earth.hide();
-						$('.section-earth .earth.frozen').animate({opacity: 1});
+						$('.section-earth .earth.frozen').transition({opacity: 1});
 					},
 					showCold: function() {
 						Earth.hide();
-						$('.section-earth .earth.cold').animate({opacity: 1});
+						$('.section-earth .earth.cold').transition({opacity: 1});
 					},
 					hide: function() {
-						$('.section-earth .earth.cold, .section-earth .earth.frozen').animate({opacity: 0});
+						$('.section-earth .earth.cold, .section-earth .earth.frozen').transition({opacity: 0});
 					}
 				}
 				
 				Ocean = {
 					showSalt: function() {
-						$('.section-ocean .salt').animate({opacity: 1});
+						$('.section-ocean .salt').transition({opacity: 1});
 					},
 					hideSalt: function() {
-						$('.section-ocean .salt').animate({opacity: 0});
+						$('.section-ocean .salt').transition({opacity: 0});
 					},
 					showBeaker: function() {
-						$('.section-ocean .beaker').animate({opacity: 1});
+						$('.section-ocean .beaker').transition({opacity: 1});
 					},
 					hideBeaker: function() {
-						$('.section-ocean .beaker').animate({opacity: 0});
+						$('.section-ocean .beaker').transition({opacity: 0});
 					}
 				}
 				
@@ -99,16 +104,16 @@
 					}
 					$('body').timeline('trigger', start, function(evt) {
 						if (evt.direction === 'down') {
-							$(el).animate({opacity: 1}, {complete: options['enter']});
+							$(el).transition({opacity: 1}, options['enter']);
 						} else {
-							$(el).animate({opacity: 0}, {complete: options['exit']});
+							$(el).transition({opacity: 0}, options['exit']);
 						}
 					});
 					$('body').timeline('trigger', end, function(evt) {
 						if (evt.direction === 'down') {
-							$(el).animate({opacity: 0}, {complete: options['exit']});
+							$(el).transition({opacity: 0}, options['exit']);
 						} else {
-							$(el).animate({opacity: 1}, {complete: options['enter']});
+							$(el).transition({opacity: 1}, options['enter']);
 						}
 					});
 					$(el).css({opacity: 0});

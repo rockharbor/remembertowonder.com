@@ -181,3 +181,10 @@ html, body {
 	top: 2000px;
 	left: -1000px;
 }
+
+/*= Animal
+************************************/
+.section-animal p {
+	position: absolute;
+	width: 200px;
+}

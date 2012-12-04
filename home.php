@@ -156,6 +156,20 @@
 					<p style="top: 1600px; left: -150px; width: 300px;" data-fade="true">And less than 10% has been explored by humans.</p>
 					<img data-z="-500" class="floor" src="<?php echo img('ocean-floor.png'); ?>" />
 				</section>
+				<section class="section-animal" style="height: 3000px">
+					<h1 data-fade="true">Have you ever thought about the Animal Kingdom?</h1>
+					<p style="top: 300px; left: -300px" data-fade="true">something about giraffes?</p>
+					<img style="top: 100px; left: -700px" data-z="-400" src="<?php echo img('giraffe-right.png'); ?>" />
+					<img style="top: 450px; left: -200px" data-z="-400" src="<?php echo img('giraffe-left.png'); ?>" />
+					<p style="top: 400px; left: 200px;" data-fade="true">China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
+					<img style="top: 450px; left: 130px;" data-z="-50" src="<?php echo img('shrub.png'); ?>" />
+					<img style="top: 450px; left: 130px;" data-z="-50" src="<?php echo img('goat.png'); ?>" />
+					<p style="top: 900px;" data-fade="true">More than 70,000 kinds of spiders exist.</p>
+					<img style="top: 900px; left: -400px;" data-z="150" data-fade="true" src="<?php img('web.png'); ?>" />
+					<p style="top: 1200px; left: -300px; width: 600px;" data-fade="true">Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p>
+					<img style="top: 200px; left: -700px" data-z="-100" src="<?php echo img('terrain-right.png'); ?>" />
+					<img style="top: 300px; left: -100%" data-z="-500" src="<?php echo img('terrain-left.png'); ?>" />
+				</section>
 			</div>
 		</div>
 	</body>

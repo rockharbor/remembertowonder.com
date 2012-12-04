@@ -48,18 +48,38 @@
 					var pos = $(el).offset();
 					var start = pos.top - 400 < 0 ? 1 : pos.top - 400;
 					var end = pos.top - 50;
+					var obj = $(el).data('fade');
+					var options = {
+						enter: function() {},
+						exit: function() {}
+					}
+					if (typeof obj === 'object') {
+						options = $.extend(options, obj);
+						// parse dot-syntax objects into valid callbacks
+						for (var c = ['enter', 'exit'] in options) {
+							var callback = options[c];
+							if (typeof options[c] === 'string') {
+								callback = window;
+								var cbObjects = options[c].split('.');
+								for (var cbObj in cbObjects) {
+									callback = callback[cbObjects[cbObj]];
+								}
+							}
+							options[c] = callback;
+						}
+					}
 					$('body').timeline('trigger', start, function(evt) {
 						if (evt.direction === 'down') {
-							$(el).animate({opacity: 1});
+							$(el).animate({opacity: 1}, {complete: options['enter']});
 						} else {
-							$(el).animate({opacity: 0});
+							$(el).animate({opacity: 0}, {complete: options['exit']});
 						}
 					});
 					$('body').timeline('trigger', end, function(evt) {
 						if (evt.direction === 'down') {
-							$(el).animate({opacity: 0});
+							$(el).animate({opacity: 0}, {complete: options['exit']});
 						} else {
-							$(el).animate({opacity: 1});
+							$(el).animate({opacity: 1}, {complete: options['enter']});
 						}
 					});
 					$(el).css({opacity: 0});

@@ -124,14 +124,14 @@
 	<body class="experience">
 		<div class="wrap">
 			<div class="viewport">
-				<section class="section-sun" style="height: 2000px">
-					<p style="top: 300px" data-fade="true">Have you ever thought about the sun?</p>
-					<img data-z="-2000" class="sun" src="<?php echo img('sun.png'); ?>" />
+				<section class="section-sun" style="height: 1800px">
+					<h1 style="top: 200px; left: -300px;">Have you ever thought about the sun?</h1>
+					<img data-z="-1600" class="sun" src="<?php echo img('sun.png'); ?>" />
 					<img data-z="-2000" class="sun hot" src="<?php echo img('sun-hot.png'); ?>" />
-					<p style="top: 800px;" class="stickleft" data-fade="true">The temperature on its surface is 10,000 degrees.</p>
-					<p style="top: 800px;" class="stickright"  data-fade="true">At its core, it is a paltry 27,000,000 degrees.</p>
-					<p style="top: 1000px;" class="stickleft"  data-fade="true">Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
-					<p style="top: 1000px;" class="stickright"  data-fade="true">Its estimated mass is 220 duodecillion pounds.</p>
+					<p style="top: 600px;" class="stickleft" data-fade="true">The temperature on its surface is 10,000 degrees.</p>
+					<p style="top: 600px;" class="stickright"  data-fade="true">At its core, it is a paltry 27,000,000 degrees.</p>
+					<p style="top: 800px;" class="stickleft"  data-fade="true">Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
+					<p style="top: 800px;" class="stickright"  data-fade="true">Its estimated mass is 220 duodecillion pounds.</p>
 					<p style="top: 1500px" class="stickcenter" data-fade="true" >And this sun is just one of about 200 billion stars in our universe.</p>
 				</section>
 				<section class="section-earth" style="height: 3000px">

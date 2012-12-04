@@ -43,6 +43,26 @@
 					});
 				}
 				
+				$('[data-fade]').each(function() {
+					var el = this;
+					var pos = $(el).offset();
+					var start = pos.top - 400 < 0 ? 1 : pos.top - 400;
+					var end = pos.top - 50;
+					$('body').timeline('trigger', start, function(evt) {
+						if (evt.direction === 'down') {
+							$(el).animate({opacity: 1});
+						} else {
+							$(el).animate({opacity: 0});
+						}
+					});
+					$('body').timeline('trigger', end, function(evt) {
+						if (evt.direction === 'down') {
+							$(el).animate({opacity: 0});
+						} else {
+							$(el).animate({opacity: 1});
+						}
+					});
+					$(el).css({opacity: 0});
 				})
 			});
 		</script>

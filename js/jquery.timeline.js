@@ -144,13 +144,21 @@
 						triggered.push(JSON.stringify(event));
 						t.callback.apply(this, [event]);
 					} else if (t.type === 'single') {
-						// padding in which to trigger single events (necessary
-						// for non-smooth scrolling to trigger single events)
-						var padding = 105;
-						var within = scrollY > t.range[0] - padding
-							&& scrollY < t.range[0] + padding
+						// check if we've passed the mark
+						var passed = false;
+						switch (event.direction) {
+							case 'down':
+								if (lastScrollY <= t.range[0] && scrollY > t.range[0]) {
+									passed = true;
+								}
+								break;
+							case 'up':
+								if (lastScrollY >= t.range[0] && scrollY < t.range[0]) {
+									passed = true;
+								}
+						}
 							
-						if (!within) {
+						if (!passed) {
 							// reset so it can be triggered again when we're
 							// within the threshold
 							t.triggered = false;
@@ -158,7 +166,7 @@
 						}
 						
 						// if we haven't triggered this event, do it now
-						if (!t.triggered) {
+						if (!t.triggered && passed) {
 							triggered.push(JSON.stringify(event));
 							t.callback.apply(this, [event]);
 							t.triggered = true;

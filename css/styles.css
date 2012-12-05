@@ -60,6 +60,7 @@ p {
 	font-size: 30px;
 	font-family: 'benthamregular', serif;
 	color: #fff;
+	text-align: center;
 	
 	opacity: 0;
 }
@@ -82,12 +83,16 @@ h1 {
 	width: 300px;
 	left: 50%;
 	margin-left: -370px; /*= width + 70px margin */
+	
+	text-align: right;
 }
 
 .stickright {
 	width: 300px;
 	left: 50%;
 	margin-left: 70px; /*= 70px margin */
+	
+	text-align: left;
 }
 
 /*= Sun
@@ -124,8 +129,8 @@ h1 {
 
 .background .section-earth .earth {
 	position: absolute;
-	left: -218.5px;
-	top: 1000px;
+	left: -116px;
+	top: 1800px;
 }
 
 .background .section-earth .earth.cold,

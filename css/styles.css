@@ -208,3 +208,47 @@ h1 {
 	background-image: url('../img/ocean-floor.png');
 	background-repeat: repeat-x;
 }
+
+/*= Animal
+************************************/
+.background .section-animal .terrain-right {
+	width: 759px;
+	height: 755px;
+	
+	background-image: url('../img/terrain-right.png');
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+}
+
+.background .section-animal .terrain-right:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	width: 9999px;
+	height: 100%;
+	top: 0px;
+	left: 99%;
+	
+	background: #81bd99;
+}
+
+.background .section-animal .terrain-left {
+	width: 1076px;
+	height: 1409px;
+	
+	background-image: url('../img/terrain-left.png');
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+}
+
+.background .section-animal .terrain-left:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	width: 9999px;
+	height: 100%;
+	top: 0px;
+	right: 99%;
+	
+	background: #80ad98;
+}

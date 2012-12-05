@@ -135,7 +135,7 @@
 						type: t.type
 					};
 					
-					event.direction = scrollY - lastScrollY  > 0 ? 'down' : 'up';
+					event.direction = scrollY - lastScrollY >= 0 ? 'down' : 'up';
 					event.relativeScroll = scrollY - t.range[0];
 					
 					// check if we're in the range
@@ -148,12 +148,12 @@
 						var passed = false;
 						switch (event.direction) {
 							case 'down':
-								if (lastScrollY <= t.range[0] && scrollY > t.range[0]) {
+								if (lastScrollY <= t.range[0] && scrollY >= t.range[0]) {
 									passed = true;
 								}
 								break;
 							case 'up':
-								if (lastScrollY >= t.range[0] && scrollY < t.range[0]) {
+								if (lastScrollY >= t.range[0] && scrollY <= t.range[0]) {
 									passed = true;
 								}
 						}

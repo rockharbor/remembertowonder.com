@@ -48,6 +48,15 @@
 					});
 				}
 				
+				Sun = {
+					showHot: function() {
+						$('.background .section-sun .sun.hot').transition({opacity: 1});
+					},
+					hideHot: function() {
+						$('.background .section-sun .sun.hot').transition({opacity: 0});
+					}
+				}
+				
 				Earth = {
 					showFrozen: function() {
 						Earth.hide();
@@ -123,12 +132,12 @@
 	<body>
 		<article>
 			<section class="section-sun">
-				<h1 style="opacity:1">Have you ever thought about the sun?</h1>
-				<p>The temperature on its surface is 10,000 degrees.</p>
-				<p>At its core, it is a paltry 27,000,000 degrees.</p>
-				<p>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
-				<p>Its estimated mass is 220 duodecillion pounds.</p>
-				<p>And this sun is just one of about 200 billion stars in our universe.</p>
+				<h1 style="top: 200px; opacity:1;" data-fade='{"range":[0, 400]}'>Have you ever thought about the sun?</h1>
+				<p style="top:450px" class="stickleft" data-fade='{"range":[401, 800]}'>The temperature on its surface is 10,000 degrees.</p>
+				<p style="top:450px" class="stickright" data-fade='{"range":[401, 800], "enter":"Sun.showHot", "exit":"Sun.hideHot"}'>At its core, it is a paltry 27,000,000 degrees.</p>
+				<p style="top:250px" class="stickleft" data-fade='{"range":[1001, 1200]}'>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
+				<p style="top:250px" class="stickright" data-fade='{"range":[1001, 1200]}'>Its estimated mass is 220 duodecillion pounds.</p>
+				<p style="top:450px" data-fade='{"range":[1501, 1800]}'>And this sun is just one of about 200 billion stars in our universe.</p>
 			</section>
 			<section class="section-earth">
 				<h1>Have you ever thought about the earth?</h1>
@@ -155,8 +164,8 @@
 		</article>
 		<div class="background">
 			<div class="viewport">
-				<section class="section-sun" style="height: 1800px">
-					<img data-z="-1600" class="sun" src="<?php echo img('sun.png'); ?>" />
+				<section class="section-sun" style="height: 1900px">
+					<img data-z="-2000" class="sun" src="<?php echo img('sun.png'); ?>" />
 					<img data-z="-2000" class="sun hot" src="<?php echo img('sun-hot.png'); ?>" />
 				</section>
 				<section class="section-earth" style="height: 3000px">

@@ -166,7 +166,7 @@
 						}
 						
 						// if we haven't triggered this event, do it now
-						if (!t.triggered && passed) {
+						if (!t.triggered) {
 							triggered.push(JSON.stringify(event));
 							t.callback.apply(this, [event]);
 							t.triggered = true;

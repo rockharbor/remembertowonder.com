@@ -157,30 +157,54 @@ h1 {
 	width: 100%;
 	height: 500px;
 	left: -50%;
+	top: 200px;
 	overflow: visible;
 	
 	background-position-y: top;
 	background-color: #9ac0d3;
 }
 
-.background .section-ocean .land {
-	left: 30px;
+.background .section-ocean .terrain-right {
+	width: 759px;
+	height: 755px;
+	
+	background-image: url('../img/terrain-right.png');
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+}
+
+.background .section-ocean .terrain-right:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	width: 9999px;
+	height: 100%;
+	top: 0px;
+	left: 99%;
+	
+	background: #81bd99;
 }
 
 .background .section-ocean .salt {
-	left: 30px;
+	left: 150px;
+	top: 0;
 	
 	opacity: 0;
 }
 
 .background .section-ocean .beaker {
-	left: -257px;
+	left: -136.5px;
 	top: 600px;
 	
 	opacity: 0;
 }
 
 .background .section-ocean .floor {
+	height: 110px;
+	width: 100%;
 	top: 2000px;
-	left: -1000px;
+	left: -50%;
+	
+	background-image: url('../img/ocean-floor.png');
+	background-repeat: repeat-x;
 }

@@ -147,12 +147,12 @@
 				<p style="top:450px" data-fade='{"range":[3401, 3800]}'>Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p>
 			</section>
 			<section class="section-ocean">
-				<h1>Have you ever thought about the ocean?</h1>
-				<p>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
-				<p>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
-				<p>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
-				<p>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
-				<p>And less than 10% has been explored by humans.</p>
+				<h1 data-fade='{"range":[4001, 4400]}'>Have you ever thought about the ocean?</h1>
+				<p style="top:200px" class="stickright" data-fade='{"range":[4401, 4800]}'>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
+				<p style="top:200px" class="stickleft" data-fade='{"range":[4801, 5200], "enter":"Ocean.showSalt", "exit":"Ocean.hideSalt"}'>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
+				<p style="top:200px;z-index:10" data-fade='{"range":[5201, 5600], "enter":"Ocean.showBeaker","exit":"Ocean.hideBeaker"}'>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
+				<p style="top:500px;z-index:10" data-fade='{"range":[5801, 6300]}'>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
+				<p style="top:500px;z-index:10" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
 			</section>
 			<section class="section-animal">
 				<h1>Have you ever thought about the Animal Kingdom?</h1>
@@ -168,21 +168,23 @@
 					<img data-z="-2000" class="sun" src="<?php echo img('sun.png'); ?>" />
 					<img data-z="-2000" class="sun hot" src="<?php echo img('sun-hot.png'); ?>" />
 				</section>
-				<section class="section-earth" style="height: 2200px">
+				<section class="section-earth" style="height: 3200px">
 					<img data-z="-1400" class="earth" src="<?php echo img('earth.png'); ?>" />
 					<img data-z="-1400" class="earth cold" src="<?php echo img('earth-cold.png'); ?>" />
 					<img data-z="-1400" class="earth frozen" src="<?php echo img('earth-frozen.png'); ?>" />
 				</section>
-				<section class="section-ocean" style="height: 4000px">
-					<div class="water"></div>
-					<img data-z="-500" class="land" src="<?php echo img('terrain-right.png'); ?>" />
-					<img data-z="-400" class="salt" src="<?php echo img('salt.png'); ?>" />
-					<img data-z="-200" class="beaker" src="<?php echo img('beaker.png'); ?>" />
-					<img data-z="-100" style="left:0; top: 700px" src="<?php echo img('whale.png'); ?>" />
-					<img data-z="-5000" style="left:-3000px; top: 1000px" src="<?php echo img('whale.png'); ?>" />
-					<img data-z="-7000" style="left:4000px; top: 4000px" src="<?php echo img('whale.png'); ?>" />
-					<img data-z="-6500" style="left:-2000px; top: 6500px" src="<?php echo img('whale.png'); ?>" />
-					<img data-z="-500" class="floor" src="<?php echo img('ocean-floor.png'); ?>" />
+				<section class="section-ocean" style="height: 2700px">
+					<div data-z="-1" class="water"></div>
+					<div style="top: 0px; left: 30px" data-z="-200" class="terrain-right"></div>
+					<img data-z="-100" class="salt" src="<?php echo img('salt.png'); ?>" />
+					<img data-z="100" class="beaker" src="<?php echo img('beaker.png'); ?>" />
+					<img data-z="-100" style="left:0; top: 800px" src="<?php echo img('whale.png'); ?>" />
+					<img data-z="-1000" style="left:-1400px; top: 1000px" src="<?php echo img('whale.png'); ?>" />
+					<img data-z="-1000" style="left:1000px; top: 1100px" src="<?php echo img('whale.png'); ?>" />
+					<img data-z="-600" style="left:-800px; top: 1600px" src="<?php echo img('whale.png'); ?>" />
+					<img data-z="-1800" style="left:-900px; top: 1800px" src="<?php echo img('whale.png'); ?>" />
+					<img data-z="-1500" style="left:500px; top: 2000px" src="<?php echo img('whale.png'); ?>" />
+					<div data-z="-1" class="floor"></div>
 				</section>
 				<section class="section-animal" style="height: 3000px">
 					<img style="top: 100px; left: -700px" data-z="-400" src="<?php echo img('giraffe-right.png'); ?>" />

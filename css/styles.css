@@ -146,28 +146,16 @@ h1 {
 
 /*= Ocean
 ************************************/
-.background .section-ocean .water:after {
-	content: ' ';
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 55px;
-	top: -55px;
-	
-	background-image: url('../img/waves-blue.png');
-	background-repeat: repeat-x;
-}
-
 .background .section-ocean .water {
 	position: relative;
 	width: 100%;
-	height: 500px;
+	height: 1910px;
 	left: -50%;
 	top: 200px;
 	overflow: visible;
 	
-	background-position-y: top;
-	background-color: #9ac0d3;
+	background-image: url('../img/waves.png');
+	background-repeat: repeat-x;
 }
 
 .background .section-ocean .terrain-right {
@@ -208,7 +196,7 @@ h1 {
 .background .section-ocean .floor {
 	height: 110px;
 	width: 100%;
-	top: 2000px;
+	top: 1900px;
 	left: -50%;
 	
 	background-image: url('../img/ocean-floor.png');

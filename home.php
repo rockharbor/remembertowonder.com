@@ -159,16 +159,16 @@
 				<h1 data-fade='{"range":[4001, 4400]}'>Have you ever thought about the ocean?</h1>
 				<p style="top:200px" class="stickright" data-fade='{"range":[4401, 4800]}'>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
 				<p style="top:200px" class="stickleft" data-fade='{"range":[4801, 5200], "enter":"Ocean.showSalt", "exit":"Ocean.hideSalt"}'>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
-				<p style="top:200px;z-index:10" data-fade='{"range":[5201, 5600], "enter":"Ocean.showBeaker","exit":"Ocean.hideBeaker"}'>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
-				<p style="top:500px;z-index:10" data-fade='{"range":[5801, 6300]}'>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
-				<p style="top:500px;z-index:10" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
+				<p style="top:200px;" data-fade='{"range":[5201, 5600], "enter":"Ocean.showBeaker","exit":"Ocean.hideBeaker"}'>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
+				<p style="top:500px;" data-fade='{"range":[5801, 6300]}'>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
+				<p style="top:500px;" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
 			</section>
 			<section class="section-animal">
 				<h1 data-fade='{"range":[7201, 7400]}'>Have you ever thought about the Animal Kingdom?</h1>
-				<p style="top:500px;z-index:10" class="stickleft" data-fade='{"range":[7501, 7700]}'>something about giraffes?</p>
-				<p style="top:400px;z-index:10" class="stickright" data-fade='{"range":[7701, 7900], "enter":"Animal.showGoat", "exit":"Animal.hideGoat"}'>China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
-				<p style="top:500px;z-index:10" class="stickright" data-fade='{"range":[8301, 8600]}'>More than 70,000 kinds of spiders exist.</p>
-				<p style="top:500px;z-index:10" data-fade='{"range":[8701, 8900]}'>Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p>
+				<p style="top:500px;" class="stickleft" data-fade='{"range":[7501, 7700]}'>something about giraffes?</p>
+				<p style="top:400px;" class="stickright" data-fade='{"range":[7701, 7900], "enter":"Animal.showGoat", "exit":"Animal.hideGoat"}'>China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
+				<p style="top:500px;" class="stickright" data-fade='{"range":[8301, 8600]}'>More than 70,000 kinds of spiders exist.</p>
+				<p style="top:500px;" data-fade='{"range":[8701, 8900]}'>Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p>
 			</section>
 		</article>
 		<div class="background">

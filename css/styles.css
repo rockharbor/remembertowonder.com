@@ -136,6 +136,11 @@ article .section-sun p {
 
 /*= Earth
 ************************************/
+article .section-earth h1,
+article .section-earth p {
+	color: #fff;
+}
+
 .background .section-earth .stars {
 	width: 9999px;
 	height: 2000px;

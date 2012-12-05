@@ -149,11 +149,11 @@
 				<p style="top:450px" data-fade='{"range":[1501, 1800]}'>And this sun is just one of about 200 billion stars in our universe.</p>
 			</section>
 			<section class="section-earth">
-				<h1 style="top:100px" data-fade='{"range":[2000, 2200]}'>Have you ever thought about the earth?</h1>
-				<p style="top:100px" data-fade='{"range":[2201, 2600]}'>It sits about 93,000,000 miles from the sun.</p>
-				<p style="top:450px" class="stickleft" data-fade='{"range":[2601, 3000], "enter":"Earth.showFrozen", "exit":"Earth.hide"}'>A minor decrease in that distance and the effect is catastrophic. Glaciers would melt. Most of our cities would flood. Ocean area would increase before potentially boiling and evaporating entirely.</p>
-				<p style="top:250px" class="stickright" data-fade='{"range":[3001, 3400], "enter":"Earth.showCold", "exit":"Earth.hide"}'>A minor increase in that distance and the effect is also catastrophic. More glaciers means more reflection of the sun&apos;s heat. Colder ocean temperatures would trap and dissolve much of the atmosphere&apos;s carbon dioxide. A decrease in the presence of CO<sub>2</sub> could drop temperatures devastatingly low.</p>
-				<p style="top:450px" data-fade='{"range":[3401, 3800]}'>Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p>
+				<h1 style="top:350px" data-fade='{"range":[2000, 2200]}'>Have you ever thought about the earth?</h1>
+				<p style="top:400px" data-fade='{"range":[2201, 2600]}'>It sits about 93,000,000 miles from the sun.</p>
+				<p style="top:450px;" class="stickleft" data-fade='{"range":[2601, 3000], "enter":"Earth.showFrozen", "exit":"Earth.hide"}'>A minor decrease in that distance and the effect is catastrophic. Glaciers would melt. Most of our cities would flood. Ocean area would increase before potentially boiling and evaporating entirely.</p>
+				<p style="top:250px;width:400px" class="stickright" data-fade='{"range":[3001, 3400], "enter":"Earth.showCold", "exit":"Earth.hide"}'>A minor increase in that distance and the effect is also catastrophic. More glaciers means more reflection of the sun&apos;s heat. Colder ocean temperatures would trap and dissolve much of the atmosphere&apos;s carbon dioxide.<br />A decrease in the presence of CO<sub>2</sub> could drop temperatures devastatingly low.</p>
+				<p style="top:400px" data-fade='{"range":[3401, 3800]}'>Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p>
 			</section>
 			<section class="section-ocean">
 				<h1 data-fade='{"range":[4001, 4400]}'>Have you ever thought about the ocean?</h1>

@@ -88,7 +88,7 @@
 				
 				Animal = {
 					showGoat: function() {
-						$('.background .section-animal .goat').transition({top: '580px'});
+						$('.background .section-animal .goat').transition({top: '600px'});
 					},
 					hideGoat: function() {
 						$('.background .section-animal .goat').transition({top: '650px'});
@@ -164,10 +164,10 @@
 				<p style="top:500px;color:#fff" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
 			</section>
 			<section class="section-animal">
-				<h1 data-fade='{"range":[7201, 7400]}'>Have you ever thought about the Animal Kingdom?</h1>
-				<p style="top:500px;" class="stickleft" data-fade='{"range":[7501, 7700]}'>something about giraffes?</p>
-				<p style="top:400px;" class="stickright" data-fade='{"range":[7701, 7900], "enter":"Animal.showGoat", "exit":"Animal.hideGoat"}'>China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
-				<p style="top:500px;" class="stickright" data-fade='{"range":[8301, 8600]}'>More than 70,000 kinds of spiders exist.</p>
+				<h1 style="top:350px" data-fade='{"range":[7120, 7350]}'>Have you ever thought about the Animal Kingdom?</h1>
+				<p style="top:500px;margin-left:-190px;text-align: left" class="stickleft" data-fade='{"range":[7501, 7700]}'>Giraffes do not have vocal chords, they communicate by vibrating the hairs on their neck.</p>
+				<p style="top:530px;" class="stickright" data-fade='{"range":[8001, 8200], "enter":"Animal.showGoat", "exit":"Animal.hideGoat"}'>China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
+				<p style="top:645px;left:445px" class="stickright" data-fade='{"range":[8301, 8600]}'>More than 70,000 kinds of spiders exist.</p>
 				<p style="top:500px;" data-fade='{"range":[8701, 8900]}'>Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p>
 			</section>
 		</article>
@@ -197,12 +197,12 @@
 					<img data-z="-1500" style="left:500px; top: 1600px" src="<?php echo img('whale.png'); ?>" />
 					<div data-z="-1" class="floor"></div>
 				</section>
-				<section class="section-animal" style="height: 3000px">
+				<section class="section-animal" style="height: 1800px">
 					<img style="top: 500px; left: -700px" data-z="-400" src="<?php echo img('giraffe-right.png'); ?>" />
 					<img style="top: 650px; left: -400px" data-z="-400" src="<?php echo img('giraffe-left.png'); ?>" />
 					<img style="top: 650px; left: 115px;" data-z="-40" src="<?php echo img('shrub.png'); ?>" />
 					<img style="top: 650px; left: 130px;" class="goat" data-z="-50" src="<?php echo img('goat.png'); ?>" />
-					<img style="top: 900px; left: -600px; position: absolute;" data-fade='{"range":[8301, 8600]}' src="<?php echo img('web.png'); ?>" />
+					<img style="top: 800px; left: -600px; position: absolute;" data-fade='{"range":[8301, 8600]}' src="<?php echo img('web.png'); ?>" />
 					<div style="top: 600px; left: -200px" data-z="-45" class="terrain-right"></div>
 					<div style="top: 600px; left: -1000px" data-z="-500" class="terrain-left"></div>
 				</section>

@@ -176,11 +176,13 @@
 				<section class="section-sun" style="height: 1900px">
 					<img data-z="-2000" class="sun" src="<?php echo img('sun.png'); ?>" />
 					<img data-z="-2000" class="sun hot" src="<?php echo img('sun-hot.png'); ?>" />
+					<div data-z="-3000" class="stars"></div>
 				</section>
 				<section class="section-earth" style="height: 3200px">
 					<img data-z="-1400" class="earth" src="<?php echo img('earth.png'); ?>" />
 					<img data-z="-1400" class="earth cold" src="<?php echo img('earth-cold.png'); ?>" />
 					<img data-z="-1400" class="earth frozen" src="<?php echo img('earth-frozen.png'); ?>" />
+					<div data-z="-1600" class="stars"></div>
 				</section>
 				<section class="section-ocean" style="height: 2700px">
 					<div data-z="-1" class="water"></div>

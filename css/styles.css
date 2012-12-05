@@ -105,6 +105,19 @@ h1 {
 
 /*= Sun
 ************************************/
+article .section-sun h1,
+article .section-sun p {
+	color: #fff;
+}
+
+.background .section-sun .stars {
+	width: 9999px;
+	height: 4000px;
+	left: -5000px;
+	position: relative;
+	background: url('../img/stars.png');
+}
+
 .background .section-sun .sun {
 	position: absolute;
 	left: -128px;
@@ -123,6 +136,15 @@ h1 {
 
 /*= Earth
 ************************************/
+.background .section-earth .stars {
+	width: 9999px;
+	height: 2000px;
+	left: -5000px;
+	top: 500px;
+	position: relative;
+	background: url('../img/stars2.png');
+}
+
 .background .section-earth p.stickleft {
 	left: -250px; /*= width + 50px margin */
 }

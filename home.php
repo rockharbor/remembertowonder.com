@@ -156,12 +156,12 @@
 				<p style="top:400px" data-fade='{"range":[3401, 3800]}'>Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p>
 			</section>
 			<section class="section-ocean">
-				<h1 data-fade='{"range":[4001, 4400]}'>Have you ever thought about the ocean?</h1>
-				<p style="top:200px" class="stickright" data-fade='{"range":[4401, 4800]}'>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
-				<p style="top:200px" class="stickleft" data-fade='{"range":[4801, 5200], "enter":"Ocean.showSalt", "exit":"Ocean.hideSalt"}'>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
-				<p style="top:200px;" data-fade='{"range":[5201, 5600], "enter":"Ocean.showBeaker","exit":"Ocean.hideBeaker"}'>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
-				<p style="top:500px;" data-fade='{"range":[5801, 6300]}'>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
-				<p style="top:500px;" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
+				<h1 style="top:350px" data-fade='{"range":[4001, 4400]}'>Have you ever thought about the ocean?</h1>
+				<p style="top:200px" class="stickleft" data-fade='{"range":[4801, 5100], "enter":"Ocean.showSalt", "exit":"Ocean.hideSalt"}'>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
+				<p style="top:200px" class="stickleft" data-fade='{"range":[5101, 5400]}'>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
+				<p style="top:400px;color:#fff" data-fade='{"range":[5501, 5700], "enter":"Ocean.showBeaker","exit":"Ocean.hideBeaker"}'>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
+				<p style="top:500px;color:#fff" data-fade='{"range":[5801, 6300]}'>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
+				<p style="top:500px;color:#fff" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
 			</section>
 			<section class="section-animal">
 				<h1 data-fade='{"range":[7201, 7400]}'>Have you ever thought about the Animal Kingdom?</h1>
@@ -187,14 +187,14 @@
 				<section class="section-ocean" style="height: 2700px">
 					<div data-z="-1" class="water"></div>
 					<div style="top: 0px; left: 30px" data-z="-200" class="terrain-right"></div>
-					<img data-z="-100" class="salt" src="<?php echo img('salt.png'); ?>" />
+					<img data-z="-180" class="salt" src="<?php echo img('salt.png'); ?>" />
 					<img data-z="100" class="beaker" src="<?php echo img('beaker.png'); ?>" />
 					<img data-z="-100" style="left:0; top: 800px" src="<?php echo img('whale.png'); ?>" />
 					<img data-z="-1000" style="left:-1400px; top: 1000px" src="<?php echo img('whale.png'); ?>" />
 					<img data-z="-1000" style="left:1000px; top: 1100px" src="<?php echo img('whale.png'); ?>" />
 					<img data-z="-600" style="left:-800px; top: 1600px" src="<?php echo img('whale.png'); ?>" />
-					<img data-z="-1800" style="left:-900px; top: 1800px" src="<?php echo img('whale.png'); ?>" />
-					<img data-z="-1500" style="left:500px; top: 2000px" src="<?php echo img('whale.png'); ?>" />
+					<img data-z="-1800" style="left:-900px; top: 1700px" src="<?php echo img('whale.png'); ?>" />
+					<img data-z="-1500" style="left:500px; top: 1600px" src="<?php echo img('whale.png'); ?>" />
 					<div data-z="-1" class="floor"></div>
 				</section>
 				<section class="section-animal" style="height: 3000px">

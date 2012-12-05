@@ -209,8 +209,8 @@ article .section-earth p {
 }
 
 .background .section-ocean .salt {
-	left: 150px;
-	top: 0;
+	left: 200px;
+	top: 50px;
 	
 	opacity: 0;
 }

@@ -79,37 +79,36 @@
 				
 				$('[data-fade]').each(function() {
 					var el = this;
-					var pos = $(el).offset();
-					var start = pos.top - 400 < 0 ? 1 : pos.top - 400;
-					var end = pos.top - 50;
 					var obj = $(el).data('fade');
 					var options = {
 						enter: function() {},
-						exit: function() {}
+						exit: function() {},
+						range: [0,0]
 					}
-					if (typeof obj === 'object') {
-						options = $.extend(options, obj);
-						// parse dot-syntax objects into valid callbacks
-						for (var c = ['enter', 'exit'] in options) {
-							var callback = options[c];
-							if (typeof options[c] === 'string') {
-								callback = window;
-								var cbObjects = options[c].split('.');
-								for (var cbObj in cbObjects) {
-									callback = callback[cbObjects[cbObj]];
-								}
+					if (typeof obj !== 'object' || typeof obj['range'] === undefined) {
+						return;
+					}
+					options = $.extend(options, obj);
+					// parse dot-syntax objects into valid callbacks
+					for (var c = ['enter', 'exit'] in options) {
+						var callback = options[c];
+						if (typeof options[c] === 'string') {
+							callback = window;
+							var cbObjects = options[c].split('.');
+							for (var cbObj in cbObjects) {
+								callback = callback[cbObjects[cbObj]];
 							}
-							options[c] = callback;
 						}
+						options[c] = callback;
 					}
-					$('body').timeline('trigger', start, function(evt) {
+					$('body').timeline('trigger', options.range[0], function(evt) {
 						if (evt.direction === 'down') {
 							$(el).transition({opacity: 1}, options['enter']);
 						} else {
 							$(el).transition({opacity: 0}, options['exit']);
 						}
 					});
-					$('body').timeline('trigger', end, function(evt) {
+					$('body').timeline('trigger', options.range[1], function(evt) {
 						if (evt.direction === 'down') {
 							$(el).transition({opacity: 0}, options['exit']);
 						} else {

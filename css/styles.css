@@ -4,7 +4,7 @@ html, body {
 	overflow-x: hidden;
 }
 
-.wrap {
+.background {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -35,7 +35,7 @@ html, body {
 	transform-style: preserve-3d;
 }
 
-.experience section {
+.background section {
 	position: relative;
 	
 	-webkit-transform-style: preserve-3d;
@@ -51,54 +51,58 @@ html, body {
 }
 
 p {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	margin-left: -300px;
+	
 	font-size: 30px;
+	font-family: 'benthamregular', serif;
+	color: #fff;
+	
+	opacity: 0;
 }
 
 h1 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	margin-left: -300px;
+	
 	font-size: 50px;
+	font-family: 'benthamregular', serif;
+	text-align: center;
+	
+	opacity: 0;
+}
+
+.stickleft {
+	width: 300px;
+	left: 50%;
+	margin-left: -370px; /*= width + 70px margin */
+}
+
+.stickright {
+	width: 300px;
+	left: 50%;
+	margin-left: 70px; /*= 70px margin */
 }
 
 /*= Sun
 ************************************/
-.section-sun p {
-	position: absolute;
-	width: 300px;
-	
-	font-family: 'benthamregular', serif;
-	color: #fff;
-}
-.section-sun h1 {
-	position: absolute;
-	width: 600px; 
-	
-	font-family: 'benthamregular', serif;
-	text-align: center;
-	color: #fff;
-}
-
-.section-sun p.stickleft {
-	left: -370px; /*= width + 70px margin */
-}
-
-.section-sun p.stickright {
-	left: 70px; /*= 70px margin */
-}
-
-.section-sun p.stickcenter {
-	left: -150px; /*= -width/2 */
-}
-
-.section-sun .sun {
+.background .section-sun .sun {
 	position: absolute;
 	left: -128px;
 	top: 1400px;
 }
 
-.section-sun .sun.hot {
+.background .section-sun .sun.hot {
 	display: none;
 }
 
-.section-sun p:first-child {
+.background .section-sun p:first-child {
 	width: 200px;
 	left: -100px;
 	top: 200px;
@@ -106,58 +110,32 @@ h1 {
 
 /*= Earth
 ************************************/
-.section-earth p {
-	position: absolute;
-	width: 200px;
-}
-
-.section-earth h1 {
-	position: absolute;
-	width: 400px;
-	left: -200px;
-	
-	text-align: center;
-}
-
-.section-earth p.stickleft {
+.background .section-earth p.stickleft {
 	left: -250px; /*= width + 50px margin */
 }
 
-.section-earth p.stickright {
+.background .section-earth p.stickright {
 	left: 50px; /*= 50px margin */
 }
 
-.section-earth p.stickcenter {
+.background .section-earth p.stickcenter {
 	left: -100px; /*= -width/2 */
 }
 
-.section-earth .earth {
+.background .section-earth .earth {
 	position: absolute;
 	left: -218.5px;
 	top: 1000px;
 }
 
-.section-earth .earth.cold,
-.section-earth .earth.frozen {
+.background .section-earth .earth.cold,
+.background .section-earth .earth.frozen {
 	opacity: 0;
 }
 
 /*= Ocean
 ************************************/
-.section-ocean p {
-	position: absolute;
-	width: 200px;
-}
-
-.section-ocean h1 {
-	position: absolute;
-	width: 400px;
-	left: -200px;
-	
-	text-align: center;
-}
-
-.section-ocean .water:after {
+.background .section-ocean .water:after {
 	content: ' ';
 	display: block;
 	position: absolute;
@@ -169,7 +147,7 @@ h1 {
 	background-repeat: repeat-x;
 }
 
-.section-ocean .water {
+.background .section-ocean .water {
 	position: relative;
 	width: 100%;
 	height: 500px;
@@ -180,31 +158,24 @@ h1 {
 	background-color: #9ac0d3;
 }
 
-.section-ocean .land {
+.background .section-ocean .land {
 	left: 30px;
 }
 
-.section-ocean .salt {
+.background .section-ocean .salt {
 	left: 30px;
 	
 	opacity: 0;
 }
 
-.section-ocean .beaker {
+.background .section-ocean .beaker {
 	left: -257px;
 	top: 600px;
 	
 	opacity: 0;
 }
 
-.section-ocean .floor {
+.background .section-ocean .floor {
 	top: 2000px;
 	left: -1000px;
-}
-
-/*= Animal
-************************************/
-.section-animal p {
-	position: absolute;
-	width: 200px;
 }

@@ -51,29 +51,29 @@
 				Earth = {
 					showFrozen: function() {
 						Earth.hide();
-						$('.section-earth .earth.frozen').transition({opacity: 1});
+						$('.background .section-earth .earth.frozen').transition({opacity: 1});
 					},
 					showCold: function() {
 						Earth.hide();
-						$('.section-earth .earth.cold').transition({opacity: 1});
+						$('.background .section-earth .earth.cold').transition({opacity: 1});
 					},
 					hide: function() {
-						$('.section-earth .earth.cold, .section-earth .earth.frozen').transition({opacity: 0});
+						$('.background .section-earth .earth.cold, .section-earth .earth.frozen').transition({opacity: 0});
 					}
 				}
 				
 				Ocean = {
 					showSalt: function() {
-						$('.section-ocean .salt').transition({opacity: 1});
+						$('.background .section-ocean .salt').transition({opacity: 1});
 					},
 					hideSalt: function() {
-						$('.section-ocean .salt').transition({opacity: 0});
+						$('.background .section-ocean .salt').transition({opacity: 0});
 					},
 					showBeaker: function() {
-						$('.section-ocean .beaker').transition({opacity: 1});
+						$('.background .section-ocean .beaker').transition({opacity: 1});
 					},
 					hideBeaker: function() {
-						$('.section-ocean .beaker').transition({opacity: 0});
+						$('.background .section-ocean .beaker').transition({opacity: 0});
 					}
 				}
 				
@@ -117,61 +117,71 @@
 						}
 					});
 					$(el).css({opacity: 0});
-				})
+				});
 			});
 		</script>
 	</head>
-	<body class="experience">
-		<div class="wrap">
+	<body>
+		<article>
+			<section class="section-sun">
+				<h1 style="opacity:1">Have you ever thought about the sun?</h1>
+				<p>The temperature on its surface is 10,000 degrees.</p>
+				<p>At its core, it is a paltry 27,000,000 degrees.</p>
+				<p>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
+				<p>Its estimated mass is 220 duodecillion pounds.</p>
+				<p>And this sun is just one of about 200 billion stars in our universe.</p>
+			</section>
+			<section class="section-earth">
+				<h1>Have you ever thought about the earth?</h1>
+				<p>It sits about 93,000,000 miles from the sun.</p>
+				<p>A minor decrease in that distance and the effect is catastrophic. Glaciers would melt. Most of our cities would flood. Ocean area would increase before potentially boiling and evaporating entirely.</p>
+				<p>A minor increase in that distance and the effect is also catastrophic. More glaciers means more reflection of the sun&apos;s heat. Colder ocean temperatures would trap and dissolve much of the atmosphere&apos;s carbon dioxide. A decrease in the presence of CO<sub>2</sub> could drop temperatures devastatingly low.</p>
+				<p>Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p>
+			</section>
+			<section class="section-ocean">
+				<h1>Have you ever thought about the ocean?</h1>
+				<p>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
+				<p>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
+				<p>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
+				<p>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
+				<p>And less than 10% has been explored by humans.</p>
+			</section>
+			<section class="section-animal">
+				<h1>Have you ever thought about the Animal Kingdom?</h1>
+				<p>something about giraffes?</p>
+				<p>China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
+				<p>More than 70,000 kinds of spiders exist.</p>
+				<p>Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p>
+			</section>
+		</article>
+		<div class="background">
 			<div class="viewport">
 				<section class="section-sun" style="height: 1800px">
-					<h1 style="top: 200px; left: -300px;">Have you ever thought about the sun?</h1>
 					<img data-z="-1600" class="sun" src="<?php echo img('sun.png'); ?>" />
 					<img data-z="-2000" class="sun hot" src="<?php echo img('sun-hot.png'); ?>" />
-					<p style="top: 600px;" class="stickleft" data-fade="true">The temperature on its surface is 10,000 degrees.</p>
-					<p style="top: 600px;" class="stickright"  data-fade="true">At its core, it is a paltry 27,000,000 degrees.</p>
-					<p style="top: 800px;" class="stickleft"  data-fade="true">Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
-					<p style="top: 800px;" class="stickright"  data-fade="true">Its estimated mass is 220 duodecillion pounds.</p>
-					<p style="top: 1500px" class="stickcenter" data-fade="true" >And this sun is just one of about 200 billion stars in our universe.</p>
 				</section>
 				<section class="section-earth" style="height: 3000px">
-					<h1 data-fade="true">Have you ever thought about the earth?</h1>
-					<img data-z="-2500" class="earth" src="<?php echo img('earth.png'); ?>" />
-					<img data-z="-2500" class="earth cold" src="<?php echo img('earth-cold.png'); ?>" />
-					<img data-z="-2500" class="earth frozen" src="<?php echo img('earth-frozen.png'); ?>" />
-					<p style="top: 200px;" class="stickleft" data-fade="true">It sits about 93,000,000 miles from the sun.</p>
-					<p style="top: 200px;" class="stickright" data-fade='{"enter": "Earth.showFrozen"}'>A minor decrease in that distance and the effect is catastrophic. Glaciers would melt. Most of our cities would flood. Ocean area would increase before potentially boiling and evaporating entirely.</p>
-					<p style="top: 400px;" class="stickleft" data-fade='{"enter": "Earth.showCold"}'>A minor increase in that distance and the effect is also catastrophic. More glaciers means more reflection of the sun&apos;s heat. Colder ocean temperatures would trap and dissolve much of the atmosphere&apos;s carbon dioxide. A decrease in the presence of CO<sub>2</sub> could drop temperatures devastatingly low.</p>
-					<p style="top: 400px;" class="stickright" data-fade="true">Even the slightest movement of Earth, either toward or away from the sun, and life might not exist as we know it.</p>
+					<img data-z="-900" class="earth" src="<?php echo img('earth.png'); ?>" />
+					<img data-z="-900" class="earth cold" src="<?php echo img('earth-cold.png'); ?>" />
+					<img data-z="-900" class="earth frozen" src="<?php echo img('earth-frozen.png'); ?>" />
 				</section>
 				<section class="section-ocean" style="height: 4000px">
-					<h1 data-fade="true">Have you ever thought about the ocean?</h1>
 					<div class="water"></div>
 					<img data-z="-500" class="land" src="<?php echo img('terrain-right.png'); ?>" />
 					<img data-z="-400" class="salt" src="<?php echo img('salt.png'); ?>" />
-					<p style="top: 200px">At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
-					<p style="left: 150px; top: 400px;" data-fade="true">If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
-					<p style="top: 600px; left: -300px; width: 600px;" data-fade="true">A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
-					<img data-z="-200" class="beaker" src="<?php echo img('beaker.png'); ?>" data-fade="true" />
-					<p style="top: 1100px; left: -150px; width: 300px;" data-fade="true">It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
+					<img data-z="-200" class="beaker" src="<?php echo img('beaker.png'); ?>" />
 					<img data-z="-100" style="left:0; top: 700px" src="<?php echo img('whale.png'); ?>" />
 					<img data-z="-5000" style="left:-3000px; top: 1000px" src="<?php echo img('whale.png'); ?>" />
 					<img data-z="-7000" style="left:4000px; top: 4000px" src="<?php echo img('whale.png'); ?>" />
 					<img data-z="-6500" style="left:-2000px; top: 6500px" src="<?php echo img('whale.png'); ?>" />
-					<p style="top: 1600px; left: -150px; width: 300px;" data-fade="true">And less than 10% has been explored by humans.</p>
 					<img data-z="-500" class="floor" src="<?php echo img('ocean-floor.png'); ?>" />
 				</section>
 				<section class="section-animal" style="height: 3000px">
-					<h1 data-fade="true">Have you ever thought about the Animal Kingdom?</h1>
-					<p style="top: 300px; left: -300px" data-fade="true">something about giraffes?</p>
 					<img style="top: 100px; left: -700px" data-z="-400" src="<?php echo img('giraffe-right.png'); ?>" />
 					<img style="top: 450px; left: -200px" data-z="-400" src="<?php echo img('giraffe-left.png'); ?>" />
-					<p style="top: 400px; left: 200px;" data-fade="true">China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
 					<img style="top: 450px; left: 130px;" data-z="-50" src="<?php echo img('shrub.png'); ?>" />
 					<img style="top: 450px; left: 130px;" data-z="-50" src="<?php echo img('goat.png'); ?>" />
-					<p style="top: 900px;" data-fade="true">More than 70,000 kinds of spiders exist.</p>
-					<img style="top: 900px; left: -400px;" data-z="150" data-fade="true" src="<?php img('web.png'); ?>" />
-					<p style="top: 1200px; left: -300px; width: 600px;" data-fade="true">Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p>
+					<img style="top: 900px; left: -400px;" data-z="150" src="<?php img('web.png'); ?>" />
 					<img style="top: 200px; left: -700px" data-z="-100" src="<?php echo img('terrain-right.png'); ?>" />
 					<img style="top: 300px; left: -100%" data-z="-500" src="<?php echo img('terrain-left.png'); ?>" />
 				</section>

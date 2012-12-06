@@ -161,6 +161,10 @@
 				}
 				
 				$('body').timeline('trigger', [10000, 10400], Human.xRay);
+				
+				$('p, h1').filter(function() {
+					return $(this).position().top > 320;
+				}).addClass('quickmobilefix');
 			});
 		</script>
 	</head>

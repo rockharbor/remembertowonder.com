@@ -44,3 +44,7 @@ h1 {
 	
 	text-align: left;
 }
+
+.quickmobilefix {
+	top: 250px !important;
+}

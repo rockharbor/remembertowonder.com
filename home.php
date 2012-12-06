@@ -147,7 +147,7 @@
 				});
 				
 				function hideAll() {
-					$('body').find('p, h1').filter(function() {
+					$('body').find('p:not(.alwaysshow), h1:not(.alwaysshow)').filter(function() {
 						return $(this).css('opacity') > 0;
 					}).stop().clearQueue().css({opacity: 0});
 					Sun.hideHot();
@@ -201,6 +201,13 @@
 				<p style="top:645px;width:700px;margin-left:-350px" data-fade='{"range":[11401,11500]}'>Your body contains about 60,000 miles of blood vessels</p>
 				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12400]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drinks 10,000 gallons of liquid during your lifetime</p>
 			</section>
+			<section class="section-wonder">
+				<p class="alwaysshow">This whole world is filled with Wonder.<br />The sun, the earth, the ocean, the animals, even you, all point to it.</p>
+				<p class="alwaysshow">And as amazing and astonishing as this wonder is, there's an even bigger story where the truest wonder truly begins.</p>
+				<p class="alwaysshow" style="margin-bottom: 200px;">Thousands of years ago, the God of the universe &mdash; the God who created our sun, earth, ocean, and animals &mdash; this all-powerful God game into this world to tell you just how wonderful you are.</p>
+				<p class="alwaysshow" style="width: 500px;margin-left: -250px;">This Christmas...<br />Re-discover the birthplace of awe and amazement.</p>
+				<p class="orange alwaysshow">Re-discover</p>
+			</section>
 		</article>
 		<div class="background">
 			<div class="viewport">
@@ -250,6 +257,10 @@
 					<img style="left: -400px; top: 1700px" src="<?php echo img('bloodvessels.png'); ?>" />
 					<img style="left: -235px; top: 2700px" src="<?php echo img('water.png'); ?>" />
 					<img style="left: -170px; top: 3400px" src="<?php echo img('scale.png'); ?>" />
+				</section>
+				<section class="section-wonder" style="height: 1200px">
+					<img data-fade='{"range":[13500,15000]}' style="top: 450px; margin-left: -39px;" src="<?php echo img('tree.png'); ?>" />
+					<img data-fade='{"range":[13500,15000]}' style="top: 800px; margin-left: -469.5px;" src="<?php echo img('wonder.png'); ?>" />
 				</section>
 			</div>
 		</div>

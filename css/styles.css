@@ -322,3 +322,31 @@ article .section-human p {
 	top: 0;
 	margin-left: -89px;
 }
+
+/*= Wonder
+************************************/
+article .section-wonder {
+	position: absolute;
+	width: 100%;
+	top: 13600px;
+}
+
+article .section-wonder p {
+	position: relative;
+	color: #000;
+	width: 700px;
+	margin-left: -350px;
+	margin-bottom: 50px;
+	
+	text-align: left;
+	
+	opacity: 1;
+}
+
+article .section-wonder p.orange {
+	color: #DE6134;
+}
+
+.background .section-wonder img {
+	position: absolute;
+}

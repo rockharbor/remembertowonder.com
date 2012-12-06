@@ -289,6 +289,38 @@ article .section-earth .p1 {
 	background: #80ad98;
 }
 
+article .section-animal .p1 {
+	top:500px;
+	margin-left:-190px;
+	text-align: left;
+}
+
+article .section-animal .p2 {
+	top:645px;
+	left:445px;
+}
+
+.background .section-animal .g1 {
+	top: 650px;
+	left: -400px;
+}
+
+.background .section-animal .shrub {
+	top: 650px;
+	left: 115px;
+}
+
+.background .section-animal .goat {
+	top: 650px;
+	left: 130px;
+}
+
+.background .section-animal .web {
+	top: 800px;
+	left: -600px;
+	position: absolute;
+}
+
 /*= Human
 ************************************/
 article .section-human h1,

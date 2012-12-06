@@ -65,3 +65,35 @@ article .section-earth .p1 {
 .background .section-ocean .terrain-right {
 	left: -100px;
 }
+
+/*= Animal
+************************************/
+article .section-animal .p1 {
+	top:700px;
+	margin-left:-130px;
+	text-align: left;
+}
+
+article .section-animal .p2 {
+	left:145px;
+}
+
+.background .section-animal .g1 {
+	top: 750px;
+	left: -220px;
+}
+
+.background .section-animal .shrub {
+	top: 670px;
+	left: 70px;
+}
+
+.background .section-animal .goat {
+	left: 70px;
+}
+
+.background .section-animal .web {
+	width: 200px;
+	top: 900px;
+	left: -200px;
+}

@@ -416,6 +416,11 @@ article .section-wonder {
 	top: 13600px;
 }
 
+article .section-wonder .p1 {
+	width: 500px;
+	margin-left: -250px;
+}
+
 article .section-wonder p {
 	position: relative;
 	color: #000;
@@ -434,4 +439,9 @@ article .section-wonder p.orange {
 
 .background .section-wonder img {
 	position: absolute;
+}
+
+.background .section-wonder .wonder {
+	top: 800px;
+	margin-left: -469.5px;
 }

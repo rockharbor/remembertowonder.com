@@ -212,7 +212,7 @@
 				<p class="alwaysshow">This whole world is filled with Wonder.<br />The sun, the earth, the ocean, the animals, even you, all point to it.</p>
 				<p class="alwaysshow">And as amazing and astonishing as this wonder is, there's an even bigger story where the truest wonder truly begins.</p>
 				<p class="alwaysshow" style="margin-bottom: 200px;">Thousands of years ago, the God of the universe &mdash; the God who created our sun, earth, ocean, and animals &mdash; this all-powerful God game into this world to tell you just how wonderful you are.</p>
-				<p class="alwaysshow" style="width: 500px;margin-left: -250px;">This Christmas...<br />Re-discover the birthplace of awe and amazement.</p>
+				<p class="p1 alwaysshow">This Christmas...<br />Re-discover the birthplace of awe and amazement.</p>
 				<p class="orange alwaysshow">Re-discover</p>
 			</section>
 		</article>
@@ -267,7 +267,7 @@
 				</section>
 				<section class="section-wonder" style="height: 1200px">
 					<img data-fade='{"range":[13500,15000]}' style="top: 450px; margin-left: -39px;" src="<?php echo img('tree.png'); ?>" />
-					<img data-fade='{"range":[13500,15000]}' style="top: 800px; margin-left: -469.5px;" src="<?php echo img('wonder.png'); ?>" />
+					<img class="wonder" data-fade='{"range":[13500,15000]}' src="<?php echo img('wonder.png'); ?>" />
 				</section>
 			</div>
 		</div>

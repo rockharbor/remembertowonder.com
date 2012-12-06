@@ -162,3 +162,21 @@ article .section-human .p4 {
 	left: -150px;
 	width: 300px;
 }
+
+/*= Wonder
+************************************/
+article .section-wonder p {
+	width: 300px;
+	margin-left: -150px;
+}
+
+article .section-wonder .p1 {
+	width: 300px;
+	margin-left: -150px;
+}
+
+.background .section-wonder .wonder {
+	top: 840px;
+	width: 300px;
+	margin-left: -150px;
+}

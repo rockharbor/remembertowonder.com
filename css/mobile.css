@@ -97,3 +97,68 @@ article .section-animal .p2 {
 	top: 900px;
 	left: -200px;
 }
+
+/*= Human
+************************************/
+article .section-human .p1,
+article .section-human .p2,
+article .section-human .p3,
+article .section-human .p4 {
+	width:300px;
+	left: 50%;
+	margin-left: -150px;
+}
+
+.background .section-human .xray {
+	left: -100px;
+	width: 200px;
+	height: 290px;
+}
+
+.background .section-human .xray .bones {
+	left: 50%; 
+	top: 100%;
+	margin-left: -89px;
+}
+
+.background .section-human .xray .machine {
+	max-width: 100%;
+}
+
+.background .section-human .humanhand {
+	left: -100px;
+	top: 990px;
+	width: 200px;
+	height: 290px;
+}
+
+.background .section-human .humanhand .hand {
+	left: 50%; 
+	top: 0;
+	margin-left: -89px;
+}
+
+.background .section-human .heart {
+	left: -90px;
+	top: 1200px;
+}
+
+.background .section-human .stomach {
+	left: -125px;
+	top: 1500px;
+}
+
+.background .section-human .bloodvessels {
+	left: -150px;
+	width: 300px;
+}
+
+.background .section-human .water {
+	left: -150px;
+	width: 300px;
+}
+
+.background .section-human .scale {
+	left: -150px;
+	width: 300px;
+}

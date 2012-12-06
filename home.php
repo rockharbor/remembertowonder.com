@@ -202,10 +202,10 @@
 			</section>
 			<section class="section-human">
 				<h1 style="top:300px;" data-fade='{"range":[9300,9600]}'>Have you ever thought about the human body?</h1>
-				<p style="width:370px;" class="stickright" data-fade='{"range":[9801,10100]}'>Your body contains more than 10 TRILLION cells.</p>
-				<p style="top:530px; margin-left: 70px; width: 350px;" class="stickright" data-fade='{"range":[10301,10500]}'>Your heart will probably beat upwards of 3 BILLION times in your life.</p>
-				<p style="top:514px; margin-left: 62px;" class="stickright" data-fade='{"range":[10901,11100]}'>Your stomach produces new lining every 3 to 4 days. If it didn&apos;t, the acids used to digest your food would also digest your stomach.</p>
-				<p style="top:645px;width:700px;margin-left:-350px" data-fade='{"range":[11401,11500]}'>Your body contains about 60,000 miles of blood vessels</p>
+				<p class="p1 stickright" data-fade='{"range":[9801,10100]}'>Your body contains more than 10 TRILLION cells.</p>
+				<p class="p2 stickright" data-fade='{"range":[10301,10500]}'>Your heart will probably beat upwards of 3 BILLION times in your life.</p>
+				<p class="p3" class="stickright" data-fade='{"range":[10901,11100]}'>Your stomach produces new lining every 3 to 4 days. If it didn&apos;t, the acids used to digest your food would also digest your stomach.</p>
+				<p class="p4" data-fade='{"range":[11401,11500]}'>Your body contains about 60,000 miles of blood vessels</p>
 				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12400]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drinks 10,000 gallons of liquid during your lifetime</p>
 			</section>
 			<section class="section-wonder">
@@ -257,13 +257,13 @@
 					</div>
 					<div class="xray">
 						<img class="bones" src="<?php echo img('xray.png'); ?>" />
-						<img src="<?php echo img('xray-machine.png'); ?>" />
+						<img class="machine" src="<?php echo img('xray-machine.png'); ?>" />
 					</div>
-					<img style="left: 120px; top: 1000px" src="<?php echo img('heart.png'); ?>" />
-					<img style="left: 70px; top: 1600px" src="<?php echo img('stomach.png'); ?>" />
-					<img style="left: -400px; top: 1700px" src="<?php echo img('bloodvessels.png'); ?>" />
-					<img style="left: -235px; top: 2700px" src="<?php echo img('water.png'); ?>" />
-					<img style="left: -170px; top: 3400px" src="<?php echo img('scale.png'); ?>" />
+					<img class="heart" src="<?php echo img('heart.png'); ?>" />
+					<img class="stomach" src="<?php echo img('stomach.png'); ?>" />
+					<img class="bloodvessels" src="<?php echo img('bloodvessels.png'); ?>" />
+					<img class="water" src="<?php echo img('water.png'); ?>" />
+					<img class="scale" src="<?php echo img('scale.png'); ?>" />
 				</section>
 				<section class="section-wonder" style="height: 1200px">
 					<img data-fade='{"range":[13500,15000]}' style="top: 450px; margin-left: -39px;" src="<?php echo img('tree.png'); ?>" />

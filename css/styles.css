@@ -328,6 +328,27 @@ article .section-human p {
 	color: #fff;
 }
 
+article .section-human .p1 {
+	width:370px;
+}
+
+article .section-human .p2 {
+	top: 530px;
+	margin-left: 70px;
+	width: 350px;
+}
+
+article .section-human .p3 {
+	top:514px;
+	margin-left: 62px;
+}
+
+article .section-human .p4 {
+	top:645px;
+	width:700px;
+	margin-left:-350px;
+}
+
 .background .section-human img {
 	position: absolute;
 }
@@ -360,6 +381,31 @@ article .section-human p {
 	left: 50%; 
 	top: 0;
 	margin-left: -89px;
+}
+
+.background .section-human .heart {
+	left: 120px;
+	top: 1000px;
+}
+
+.background .section-human .stomach {
+	left: 70px;
+	top: 1600px;
+}
+
+.background .section-human .bloodvessels {
+	left: -400px;
+	top: 1700px;
+}
+
+.background .section-human .water {
+	left: -235px;
+	top: 2700px;
+}
+
+.background .section-human .scale {
+	left: -170px;
+	top: 3400px;
 }
 
 /*= Wonder

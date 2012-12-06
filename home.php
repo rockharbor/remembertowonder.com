@@ -34,16 +34,18 @@
 						});
 					});
 				} else {
-					$('[data-z]').each(function() {
-						// range being the vanishing point
-						var maxRange = 1000;
-						if ($(this).data('z') < 0) {
-							maxRange = -10000;
+					$('[data-z]:not(.stars)').each(function() {
+						var perspective = 1000;
+						var times = Math.floor(Math.abs($(this).data('z')) / perspective);
+						var fauxZScale = 1;
+						while (times > 0) {
+							fauxZScale -= fauxZScale/2;
+							times--;
 						}
-						var fauxZScale = 1 + (maxRange - $(this).data('z')) / Math.abs(maxRange);
 						$(this).css({
 							zIndex: $(this).data('z'),
-							transform: 'scale('+fauxZScale+', '+fauxZScale+')'
+							transform: 'scale('+fauxZScale+', '+fauxZScale+')',
+							top: (fauxZScale * $(this).position().top)+'px'
 						});
 					});
 				}

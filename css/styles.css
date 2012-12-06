@@ -52,7 +52,6 @@ body {
 
 [data-z] {
 	position: absolute;
-	-webkit-transition: all 1s ease-in-out;
 }
 
 p {

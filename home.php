@@ -18,9 +18,7 @@
 				}
 				
 				// setup timeline
-				$('body').timeline({
-					//debug: true
-				});
+				$('body').timeline();
 				
 				if (Modernizr.testAllProps('perspective')) {
 					$('[data-z]').each(function() {

@@ -231,7 +231,7 @@
 				</section>
 				<section class="section-ocean" style="height: 2700px">
 					<div data-z="-1" class="water"></div>
-					<div style="top: 0px; left: 30px" data-z="-200" class="terrain-right"></div>
+					<div data-z="-200" class="terrain-right"></div>
 					<img data-z="-180" class="salt" src="<?php echo img('salt.png'); ?>" />
 					<img data-z="100" class="beaker" src="<?php echo img('beaker.png'); ?>" />
 					<img data-z="-100" style="left:0; top: 800px" src="<?php echo img('whale.png'); ?>" />

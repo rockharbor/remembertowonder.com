@@ -201,6 +201,8 @@ article .section-earth .p1 {
 .background .section-ocean .terrain-right {
 	width: 759px;
 	height: 755px;
+	top: 0px; 
+	left: 30px;
 	
 	background-image: url('../img/terrain-right.png');
 	background-repeat: no-repeat;

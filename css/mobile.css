@@ -55,3 +55,13 @@ article .section-earth .p1 {
 	width: 150px;
 	top: 200px;
 }
+
+/*= Ocean
+************************************/
+.background .section-ocean .salt {
+	left: 50px;
+}
+
+.background .section-ocean .terrain-right {
+	left: -100px;
+}

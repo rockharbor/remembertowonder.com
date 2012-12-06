@@ -129,6 +129,7 @@
 					}
 					$('body').timeline('trigger', options.range[0], function(evt) {
 						if (evt.direction === 'down') {
+							hideAll();
 							$(el).transition({opacity: 1}, options['enter']);
 						} else {
 							$(el).transition({opacity: 0}, options['exit']);
@@ -138,11 +139,23 @@
 						if (evt.direction === 'down') {
 							$(el).transition({opacity: 0}, options['exit']);
 						} else {
+							hideAll();
 							$(el).transition({opacity: 1}, options['enter']);
 						}
 					});
 					$(el).css({opacity: 0});
 				});
+				
+				function hideAll() {
+					$('body').find('p, h1').filter(function() {
+						return $(this).css('opacity') > 0;
+					}).stop().clearQueue().css({opacity: 0});
+					Sun.hideHot();
+					Earth.hide();
+					Ocean.hideBeaker();
+					Ocean.hideSalt();
+					Animal.hideGoat();
+				}
 				
 				$('body').timeline('trigger', [10000, 10400], Human.xRay);
 			});

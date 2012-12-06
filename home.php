@@ -236,7 +236,7 @@
 				<p class="p2 stickright" data-fade='{"range":[10301,10500]}'>Your heart will probably beat upwards of 3 BILLION times in your life.</p>
 				<p class="p3 stickright" data-fade='{"range":[10901,11100]}'>Your stomach produces new lining every 3 to 4 days. If it didn&apos;t, the acids used to digest your food would also digest your stomach.</p>
 				<p class="p4" data-fade='{"range":[11401,11500]}'>Your body contains about 60,000 miles of blood vessels</p>
-				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12500]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drink 10,000 gallons of liquid during your lifetime</p>
+				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12500]}'>If you&apos;re like the average person, you&apos;ll drink 10,000 gallons of liquid and eat 50 tons of food during your lifetime</p>
 			</section>
 			<section class="section-wonder">
 				<p class="alwaysshow">This whole world is filled with Wonder.<br />The sun, the earth, the ocean, the animals, even you, all point to it.</p>

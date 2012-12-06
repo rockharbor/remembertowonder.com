@@ -123,6 +123,13 @@ article .section-sun .p2 {
 	top:250px;
 }
 
+.arrow {
+	position: fixed;
+	bottom: 30px;
+	right: 12px;
+	z-index: 100;
+}
+
 .background .section-sun .stars {
 	width: 9999px;
 	height: 4000px;

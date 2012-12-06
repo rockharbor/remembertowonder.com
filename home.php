@@ -164,6 +164,23 @@
 				$('p:not(.alwaysshow), h1:not(.alwaysshow)').filter(function() {
 					return $(this).position().top > 320;
 				}).addClass('quickmobilefix');
+				
+				var nagInt;
+				startNag = function() {
+					nagInt = setInterval(function() {
+						$('.arrow')
+							.animate({bottom:'10px'})
+							.animate({bottom:'30px'})
+					}, 3000);
+				}
+				startNag();
+				
+				$('body').timeline('trigger', 300, function(nagInt) {
+					clearInterval(nagInt);
+					$('.arrow').fadeOut();
+				});
+				
+				
 			});
 		</script>
 		<script type="text/javascript">
@@ -182,6 +199,7 @@
 	</head>
 	<body>
 		<article>
+			<img class="arrow" src="<?php echo img('arrow.png'); ?>" />
 			<section class="section-sun">
 				<h1 style="top: 200px; opacity:1;" data-fade='{"range":[0, 400]}'>Have you ever thought about the sun?</h1>
 				<p style="top:450px" class="stickleft" data-fade='{"range":[401, 800]}'>The temperature on its surface is 10,000 degrees.</p>

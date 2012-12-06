@@ -18,7 +18,9 @@
 				}
 				
 				// setup timeline
-				$('body').timeline();
+				$('body').timeline({
+					//debug: true
+				});
 				
 				if (Modernizr.testAllProps('perspective')) {
 					$('[data-z]').each(function() {
@@ -172,8 +174,8 @@
 				<h1 style="top: 200px; opacity:1;" data-fade='{"range":[0, 400]}'>Have you ever thought about the sun?</h1>
 				<p style="top:450px" class="stickleft" data-fade='{"range":[401, 800]}'>The temperature on its surface is 10,000 degrees.</p>
 				<p style="top:450px" class="stickright" data-fade='{"range":[401, 800], "enter":"Sun.showHot", "exit":"Sun.hideHot"}'>At its core, it is a paltry 27,000,000 degrees.</p>
-				<p class="p1 stickleft" data-fade='{"range":[1001, 1200]}'>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
-				<p class="p2 stickright" data-fade='{"range":[1001, 1200]}'>Its estimated mass is 220 duodecillion pounds.</p>
+				<p class="p1 stickleft" data-fade='{"range":[1001, 1400]}'>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
+				<p class="p2 stickright" data-fade='{"range":[1001, 1400]}'>Its estimated mass is 220,000,000,000,000, 000,000,000,000,000, 000,000,000,000 pounds.</p>
 				<p style="top:450px" data-fade='{"range":[1501, 1800]}'>And this sun is just one of about 200 billion stars in our universe.</p>
 			</section>
 			<section class="section-earth">
@@ -204,7 +206,7 @@
 				<p class="p2 stickright" data-fade='{"range":[10301,10500]}'>Your heart will probably beat upwards of 3 BILLION times in your life.</p>
 				<p class="p3 stickright" data-fade='{"range":[10901,11100]}'>Your stomach produces new lining every 3 to 4 days. If it didn&apos;t, the acids used to digest your food would also digest your stomach.</p>
 				<p class="p4" data-fade='{"range":[11401,11500]}'>Your body contains about 60,000 miles of blood vessels</p>
-				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12500]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drinks 10,000 gallons of liquid during your lifetime</p>
+				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12500]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drink 10,000 gallons of liquid during your lifetime</p>
 			</section>
 			<section class="section-wonder">
 				<p class="alwaysshow">This whole world is filled with Wonder.<br />The sun, the earth, the ocean, the animals, even you, all point to it.</p>

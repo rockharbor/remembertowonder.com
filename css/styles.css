@@ -179,6 +179,11 @@ article .section-earth p {
 	opacity: 0;
 }
 
+article .section-earth .p1 {
+	top: 250px;
+	width: 400px;
+}
+
 /*= Ocean
 ************************************/
 .background .section-ocean .water {

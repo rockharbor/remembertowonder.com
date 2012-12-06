@@ -48,3 +48,10 @@ h1 {
 .quickmobilefix {
 	top: 250px !important;
 }
+
+/*= Earth
+************************************/
+article .section-earth .p1 {
+	width: 150px;
+	top: 200px;
+}

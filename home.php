@@ -21,7 +21,7 @@
 					debug: true
 				});
 				
-				if (Modernizr.csstransforms3d) {
+				if (Modernizr.testAllProps('perspective')) {
 					$('[data-z]').each(function() {
 						$(this).css({
 							transform: 'translate3d(0, 0, '+$(this).data('z')+'px)'

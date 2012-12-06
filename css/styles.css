@@ -466,6 +466,10 @@ article .section-wonder p.orange {
 	color: #DE6134;
 }
 
+.background .section-wonder {
+	height: 1200px;
+}
+
 .background .section-wonder img {
 	position: absolute;
 }
@@ -476,6 +480,60 @@ article .section-wonder p.orange {
 }
 
 .background .section-wonder .tree {
-	top: 450px;
+	top: 396px;
 	margin-left: -39px;
+}
+
+/*= Info
+************************************/
+article .section-info {
+	position: absolute;
+	width: 100%;
+	top: 14800px;
+}
+
+article .section-info p {
+	position: relative;
+	
+	opacity: 1;
+}
+
+article .section-info p.join {
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+article .section-info .f {
+	margin-left: auto;
+	width: auto;
+	left: auto;
+	
+	text-align: left;
+}
+
+article .section-info .t {
+	margin-left: auto;
+	width: auto;
+	left: auto;
+	
+	font-size: 15px;
+	text-align: left;
+}
+
+strong {
+	font-weight: bold;
+}
+
+article .section-info a:hover,
+article .section-info a {
+	color: #DE6134;
+	text-decoration: underline;
+}
+
+article .section-info .times {
+	width: 500px;
+	position: relative;
+	left:50%;
+	margin-left:-228px;
+	padding-bottom: 50px;
 }

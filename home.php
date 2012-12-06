@@ -213,6 +213,40 @@
 				<p class="p1 alwaysshow">This Christmas...<br />Re-discover the birthplace<br />of awe and amazement.</p>
 				<p class="orange alwaysshow">Re-discover</p>
 			</section>
+			<section class="section-info">
+				<p class="join alwaysshow">Join <a target="_blank" href="http://rockharbor.org"><strong>ROCK</strong>HARBOR Church</a> in Orange County for one of 20 Christmas services in 5 different cities.</p>
+				<div class="times clearfix" style="text-align:center">
+					<div style="width:50%;display: inline-block">
+						<p class="f alwaysshow"><a target="_blank" href="http://rockharbor.org/events/christmas">Costa Mesa</a></p>
+						<p class="t alwaysshow">Dec. 22: 6pm</p>
+						<p class="t alwaysshow">Dec. 23: 9am, 11am, 7pm, 9pm</p>
+						<p class="t alwaysshow">Dec. 24: 12pm, 2pm, 5pm, 7pm</p>
+					</div>
+				</div>
+				<div class="times clearfix">
+					<div style="width:49%;margin-left:1%;float:right">
+						<p class="f alwaysshow"><a target="_blank" href="http://missionviejo.rockharbor.org/events/christmas">Mission Viejo</a></p>
+						<p class="t alwaysshow">Dec. 24: 12pm &amp; 2pm</p>
+					</div>
+					<div style="width:49%;margin-left:1%;float:right">
+						<p class="f alwaysshow"><a target="_blank" href="http://fullerton.rockharbor.org/events/christmas">Fullerton</a></p>
+						<p class="t alwaysshow">Dec. 23: 10am &amp; 7pm</p>
+						<p class="t alwaysshow">Dec. 24: 4pm &amp; 6pm</p>
+					</div>
+				</div>
+				<div class="times clearfix">
+					<div style="width:49%;margin-right:1%;float:left">
+						<p class="f alwaysshow"><a target="_blank" href="http://huntingtonbeach.rockharbor.org/events/christmas">Huntington Beach</a></p>
+						<p class="t alwaysshow">Dec. 23: 9am &amp; 11am</p>
+						<p class="t alwaysshow">Dec. 24: 4pm</p>
+					</div>
+					<div style="width:49%;margin-right:1%;float:left">
+						<p class="f alwaysshow"><a target="_blank" href="http://orange.rockharbor.org/events/christmas">Orange</a></p>
+						<p class="t alwaysshow">Dec. 23: 10am</p>
+						<p class="t alwaysshow">Dec. 24: 5pm</p>
+					</div>
+				</div>
+			</section>
 		</article>
 		<div class="background">
 			<div class="viewport">
@@ -263,9 +297,12 @@
 					<img class="water" src="<?php echo img('water.png'); ?>" />
 					<img class="scale" src="<?php echo img('scale.png'); ?>" />
 				</section>
-				<section class="section-wonder" style="height: 1200px">
+				<section class="section-wonder">
 					<img class="tree" data-fade='{"range":[13500,15000]}' src="<?php echo img('tree.png'); ?>" />
 					<img class="wonder" data-fade='{"range":[13500,15000]}' src="<?php echo img('wonder.png'); ?>" />
+				</section>
+				<section class="section-info" style="height: 500px">
+				
 				</section>
 			</div>
 		</div>

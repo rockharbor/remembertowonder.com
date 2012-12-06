@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0,width=device-width" />
 		<title>Remember To Wonder</title>
 		<link rel="stylesheet" href="<?php echo $url['base']; ?>/css/reset.css" />
 		<link rel="stylesheet" href="<?php echo $url['base']; ?>/css/styles.css" />

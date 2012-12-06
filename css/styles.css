@@ -116,6 +116,14 @@ article .section-sun p {
 	color: #fff;
 }
 
+article .section-sun .p1 {
+	top:250px;
+}
+
+article .section-sun .p2 {
+	top:250px;
+}
+
 .background .section-sun .stars {
 	width: 9999px;
 	height: 4000px;
@@ -186,6 +194,19 @@ article .section-earth .p1 {
 
 /*= Ocean
 ************************************/
+article .section-ocean .p1 {
+	top: 200px;
+}
+
+article .section-ocean .p2 {
+	top: 200px;
+}
+
+article .section-ocean .p3 {
+	top: 500px;
+	color: #fff;
+}
+
 .background .section-ocean .water {
 	position: relative;
 	width: 100%;
@@ -269,6 +290,8 @@ article .section-earth .p1 {
 }
 
 .background .section-animal .terrain-left {
+	top: 600px;
+	left: -1000px;
 	width: 1076px;
 	height: 1409px;
 	
@@ -303,6 +326,11 @@ article .section-animal .p2 {
 .background .section-animal .g1 {
 	top: 650px;
 	left: -400px;
+}
+
+.background .section-animal .g2 {
+	top: 500px;
+	left: -700px;
 }
 
 .background .section-animal .shrub {
@@ -429,6 +457,7 @@ article .section-wonder p {
 	margin-bottom: 50px;
 	
 	text-align: left;
+	line-height: 24px;
 	
 	opacity: 1;
 }
@@ -444,4 +473,9 @@ article .section-wonder p.orange {
 .background .section-wonder .wonder {
 	top: 800px;
 	margin-left: -469.5px;
+}
+
+.background .section-wonder .tree {
+	top: 450px;
+	margin-left: -39px;
 }

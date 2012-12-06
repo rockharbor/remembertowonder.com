@@ -49,6 +49,16 @@ h1 {
 	top: 250px !important;
 }
 
+/*= Sun
+************************************/
+article .section-sun .p1 {
+	top: 130px;
+}
+
+article .section-sun .p2 {
+	top: 130px;
+}
+
 /*= Earth
 ************************************/
 article .section-earth .p1 {
@@ -58,6 +68,18 @@ article .section-earth .p1 {
 
 /*= Ocean
 ************************************/
+article .section-ocean .p1 {
+	margin-left: -130px;
+}
+
+article .section-ocean .p2 {
+	margin-left: -127px;
+}
+
+article .section-ocean .p3 {
+	top: 412px;
+}
+
 .background .section-ocean .salt {
 	left: 50px;
 }
@@ -75,12 +97,17 @@ article .section-animal .p1 {
 }
 
 article .section-animal .p2 {
+	top: 297px;
 	left:145px;
 }
 
-.background .section-animal .g1 {
-	top: 750px;
-	left: -220px;
+.background .section-animal .g2 {
+	top: 311px;
+	left: -197px;
+}
+
+.background .section-animal .terrain-left {
+	top: 115px;
 }
 
 .background .section-animal .shrub {
@@ -94,7 +121,7 @@ article .section-animal .p2 {
 
 .background .section-animal .web {
 	width: 200px;
-	top: 900px;
+	top: 757px;
 	left: -200px;
 }
 
@@ -107,6 +134,13 @@ article .section-human .p4 {
 	width:300px;
 	left: 50%;
 	margin-left: -150px;
+	
+	text-align: center;
+}
+
+article .section-human .p1 {
+	width: 200px;
+	margin-left: -100px;
 }
 
 .background .section-human .xray {
@@ -116,9 +150,10 @@ article .section-human .p4 {
 }
 
 .background .section-human .xray .bones {
+	width: 100px;
 	left: 50%; 
 	top: 100%;
-	margin-left: -89px;
+	margin-left: -50px;
 }
 
 .background .section-human .xray .machine {
@@ -133,34 +168,38 @@ article .section-human .p4 {
 }
 
 .background .section-human .humanhand .hand {
+	width: 100px;
 	left: 50%; 
 	top: 0;
-	margin-left: -89px;
+	margin-left: -50px;
 }
 
 .background .section-human .heart {
-	left: -90px;
+	width: 130px;
+	left: -75px;
 	top: 1200px;
 }
 
 .background .section-human .stomach {
-	left: -125px;
-	top: 1500px;
+	width: 130px;
+	left: -75px;
+	top: 1459px;
 }
 
 .background .section-human .bloodvessels {
-	left: -150px;
-	width: 300px;
+	left: -88px;
+	width: 340px;
 }
 
 .background .section-human .water {
-	left: -150px;
-	width: 300px;
+	left: -100px;
+	top: 2767px;
+	width: 200px;
 }
 
 .background .section-human .scale {
-	left: -150px;
-	width: 300px;
+	left: -100px;
+	width: 200px;
 }
 
 /*= Wonder
@@ -168,15 +207,28 @@ article .section-human .p4 {
 article .section-wonder p {
 	width: 300px;
 	margin-left: -150px;
+	
+	line-height: 12px;
 }
 
 article .section-wonder .p1 {
 	width: 300px;
 	margin-left: -150px;
+	left: 50%;
+	padding-top: 86px;
+	text-align: center;
+}
+
+article .section-wonder p.orange {
+	top: 210px;
 }
 
 .background .section-wonder .wonder {
 	top: 840px;
 	width: 300px;
 	margin-left: -150px;
+}
+
+.background .section-wonder .tree {
+	top: 346px;
 }

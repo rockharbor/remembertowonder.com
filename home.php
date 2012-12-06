@@ -160,7 +160,7 @@
 				
 				$('body').timeline('trigger', [10000, 10400], Human.xRay);
 				
-				$('p, h1').filter(function() {
+				$('p:not(.alwaysshow), h1:not(.alwaysshow)').filter(function() {
 					return $(this).position().top > 320;
 				}).addClass('quickmobilefix');
 			});
@@ -172,8 +172,8 @@
 				<h1 style="top: 200px; opacity:1;" data-fade='{"range":[0, 400]}'>Have you ever thought about the sun?</h1>
 				<p style="top:450px" class="stickleft" data-fade='{"range":[401, 800]}'>The temperature on its surface is 10,000 degrees.</p>
 				<p style="top:450px" class="stickright" data-fade='{"range":[401, 800], "enter":"Sun.showHot", "exit":"Sun.hideHot"}'>At its core, it is a paltry 27,000,000 degrees.</p>
-				<p style="top:250px" class="stickleft" data-fade='{"range":[1001, 1200]}'>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
-				<p style="top:250px" class="stickright" data-fade='{"range":[1001, 1200]}'>Its estimated mass is 220 duodecillion pounds.</p>
+				<p class="p1 stickleft" data-fade='{"range":[1001, 1200]}'>Its pressure is 340,000,000 times greater than the earth&apos;s at sea level.</p>
+				<p class="p2 stickright" data-fade='{"range":[1001, 1200]}'>Its estimated mass is 220 duodecillion pounds.</p>
 				<p style="top:450px" data-fade='{"range":[1501, 1800]}'>And this sun is just one of about 200 billion stars in our universe.</p>
 			</section>
 			<section class="section-earth">
@@ -185,11 +185,11 @@
 			</section>
 			<section class="section-ocean">
 				<h1 style="top:350px" data-fade='{"range":[4001, 4400]}'>Have you ever thought about the ocean?</h1>
-				<p style="top:200px" class="stickleft" data-fade='{"range":[4801, 5100], "enter":"Ocean.showSalt", "exit":"Ocean.hideSalt"}'>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
-				<p style="top:200px" class="stickleft" data-fade='{"range":[5101, 5400]}'>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
+				<p class="p1 stickleft" data-fade='{"range":[4801, 5100], "enter":"Ocean.showSalt", "exit":"Ocean.hideSalt"}'>If you evaporated all its water and spread the resulting salt equally over the earth&apos;s land area, there would be a 500-foot layer that covered our continents.</p>
+				<p class="p2 stickleft" data-fade='{"range":[5101, 5400]}'>At 140,000,000 square miles, it occupies more than 70% of the Earth&apos;s surface.</p>
 				<p style="top:400px;color:#fff" data-fade='{"range":[5501, 5700], "enter":"Ocean.showBeaker","exit":"Ocean.hideBeaker"}'>A single milliliter of ocean water may contain tens of thousands of zooplankton, hundreds of thousands of phytoplankton, millions of bacterial cells, and more than ten million viruses.</p>
 				<p style="top:500px;color:#fff" data-fade='{"range":[5801, 6300]}'>It provides 99% of the Earth&apos;s living space. More than 250,000 known species inhabit it.</p>
-				<p style="top:500px;color:#fff" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
+				<p class="p3" data-fade='{"range":[6301, 6500]}'>And less than 10% has been explored by humans.</p>
 			</section>
 			<section class="section-animal">
 				<h1 style="top:350px" data-fade='{"range":[7120, 7350]}'>Have you ever thought about the Animal Kingdom?</h1>
@@ -202,15 +202,15 @@
 				<h1 style="top:300px;" data-fade='{"range":[9300,9600]}'>Have you ever thought about the human body?</h1>
 				<p class="p1 stickright" data-fade='{"range":[9801,10100]}'>Your body contains more than 10 TRILLION cells.</p>
 				<p class="p2 stickright" data-fade='{"range":[10301,10500]}'>Your heart will probably beat upwards of 3 BILLION times in your life.</p>
-				<p class="p3" class="stickright" data-fade='{"range":[10901,11100]}'>Your stomach produces new lining every 3 to 4 days. If it didn&apos;t, the acids used to digest your food would also digest your stomach.</p>
+				<p class="p3 stickright" data-fade='{"range":[10901,11100]}'>Your stomach produces new lining every 3 to 4 days. If it didn&apos;t, the acids used to digest your food would also digest your stomach.</p>
 				<p class="p4" data-fade='{"range":[11401,11500]}'>Your body contains about 60,000 miles of blood vessels</p>
-				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12400]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drinks 10,000 gallons of liquid during your lifetime</p>
+				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12500]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drinks 10,000 gallons of liquid during your lifetime</p>
 			</section>
 			<section class="section-wonder">
 				<p class="alwaysshow">This whole world is filled with Wonder.<br />The sun, the earth, the ocean, the animals, even you, all point to it.</p>
 				<p class="alwaysshow">And as amazing and astonishing as this wonder is, there's an even bigger story where the truest wonder truly begins.</p>
 				<p class="alwaysshow" style="margin-bottom: 200px;">Thousands of years ago, the God of the universe &mdash; the God who created our sun, earth, ocean, and animals &mdash; this all-powerful God game into this world to tell you just how wonderful you are.</p>
-				<p class="p1 alwaysshow">This Christmas...<br />Re-discover the birthplace of awe and amazement.</p>
+				<p class="p1 alwaysshow">This Christmas...<br />Re-discover the birthplace<br />of awe and amazement.</p>
 				<p class="orange alwaysshow">Re-discover</p>
 			</section>
 		</article>
@@ -241,13 +241,13 @@
 					<div data-z="-1" class="floor"></div>
 				</section>
 				<section class="section-animal" style="height: 1800px">
-					<img style="top: 500px; left: -700px" data-z="-400" src="<?php echo img('giraffe-right.png'); ?>" />
+					<img class="g2" data-z="-400" src="<?php echo img('giraffe-right.png'); ?>" />
 					<img class="g1" data-z="-400" src="<?php echo img('giraffe-left.png'); ?>" />
 					<img class="shrub" data-z="-40" src="<?php echo img('shrub.png'); ?>" />
 					<img class="goat" data-z="-50" src="<?php echo img('goat.png'); ?>" />
 					<img class="web" data-fade='{"range":[8301, 8600]}' src="<?php echo img('web.png'); ?>" />
 					<div style="top: 600px; left: -200px" data-z="-45" class="terrain-right"></div>
-					<div style="top: 600px; left: -1000px" data-z="-500" class="terrain-left"></div>
+					<div data-z="-500" class="terrain-left"></div>
 				</section>
 				<section class="section-human" style="height: 4000px">
 					<div class="humanhand">
@@ -264,7 +264,7 @@
 					<img class="scale" src="<?php echo img('scale.png'); ?>" />
 				</section>
 				<section class="section-wonder" style="height: 1200px">
-					<img data-fade='{"range":[13500,15000]}' style="top: 450px; margin-left: -39px;" src="<?php echo img('tree.png'); ?>" />
+					<img class="tree" data-fade='{"range":[13500,15000]}' src="<?php echo img('tree.png'); ?>" />
 					<img class="wonder" data-fade='{"range":[13500,15000]}' src="<?php echo img('wonder.png'); ?>" />
 				</section>
 			</div>

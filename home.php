@@ -21,7 +21,7 @@
 				// setup timeline
 				$('body').timeline();
 				
-				if (Modernizr.testAllProps('perspective')) {
+				if (Modernizr.testAllProps('perspective') && !jQuery.browser.mobile) {
 					$('[data-z]').each(function() {
 						$(this).css({
 							transform: 'translate3d(0, 0, '+$(this).data('z')+'px)'

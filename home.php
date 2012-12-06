@@ -95,6 +95,14 @@
 					}
 				}
 				
+				Human = {
+					xRay: function(evt) {
+						var perc = 100-evt.percent*100;
+						$('.section-human .humanhand .hand').css({top: -(evt.percent*100)+'%'});
+						$('.section-human .xray .bones').css({top: perc+'%'});
+					}
+				}
+				
 				$('[data-fade]').each(function() {
 					var el = this;
 					var obj = $(el).data('fade');
@@ -135,6 +143,8 @@
 					});
 					$(el).css({opacity: 0});
 				});
+				
+				$('body').timeline('trigger', [10000, 10400], Human.xRay);
 			});
 		</script>
 	</head>
@@ -169,6 +179,14 @@
 				<p style="top:530px;" class="stickright" data-fade='{"range":[8001, 8200], "enter":"Animal.showGoat", "exit":"Animal.hideGoat"}'>China boasts the world&apos;s highest goat population, coming in at more than 170,000,000.</p>
 				<p style="top:645px;left:445px" class="stickright" data-fade='{"range":[8301, 8600]}'>More than 70,000 kinds of spiders exist.</p>
 				<p style="top:500px;" data-fade='{"range":[8701, 8900]}'>Roughly 1,000,000 land species have been named. Experts project that to be only 15% of what&apos;s out there. More than 5,500,000 have yet to be discovered.</p>
+			</section>
+			<section class="section-human">
+				<h1 style="top:300px;" data-fade='{"range":[9300,9600]}'>Have you ever thought about the human body?</h1>
+				<p style="width:370px;" class="stickright" data-fade='{"range":[9801,10100]}'>Your body contains more than 10 TRILLION cells.</p>
+				<p style="top:530px; margin-left: 70px; width: 350px;" class="stickright" data-fade='{"range":[10301,10500]}'>Your heart will probably beat upwards of 3 BILLION times in your life.</p>
+				<p style="top:514px; margin-left: 62px;" class="stickright" data-fade='{"range":[10901,11100]}'>Your stomach produces new lining every 3 to 4 days. If it didn&apos;t, the acids used to digest your food would also digest your stomach.</p>
+				<p style="top:645px;width:700px;margin-left:-350px" data-fade='{"range":[11401,11500]}'>Your body contains about 60,000 miles of blood vessels</p>
+				<p style="top:450px;color:#000;" data-fade='{"range":[12201,12400]}'>If you&apos;re like the average person, you&apos;ll eat 50 tons of food and drinks 10,000 gallons of liquid during your lifetime</p>
 			</section>
 		</article>
 		<div class="background">
@@ -205,6 +223,20 @@
 					<img style="top: 800px; left: -600px; position: absolute;" data-fade='{"range":[8301, 8600]}' src="<?php echo img('web.png'); ?>" />
 					<div style="top: 600px; left: -200px" data-z="-45" class="terrain-right"></div>
 					<div style="top: 600px; left: -1000px" data-z="-500" class="terrain-left"></div>
+				</section>
+				<section class="section-human" style="height: 4000px">
+					<div class="humanhand">
+						<img class="hand" src="<?php echo img('hand.png'); ?>" />
+					</div>
+					<div class="xray">
+						<img class="bones" src="<?php echo img('xray.png'); ?>" />
+						<img src="<?php echo img('xray-machine.png'); ?>" />
+					</div>
+					<img style="left: 120px; top: 1000px" src="<?php echo img('heart.png'); ?>" />
+					<img style="left: 70px; top: 1600px" src="<?php echo img('stomach.png'); ?>" />
+					<img style="left: -400px; top: 1700px" src="<?php echo img('bloodvessels.png'); ?>" />
+					<img style="left: -235px; top: 2700px" src="<?php echo img('water.png'); ?>" />
+					<img style="left: -170px; top: 3400px" src="<?php echo img('scale.png'); ?>" />
 				</section>
 			</div>
 		</div>

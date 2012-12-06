@@ -7,7 +7,6 @@ html, body {
 body {
 	background-image: url('../img/background.jpg');
 	background-repeat: repeat-x;
-	background-origin: 0 0;
 }
 
 .background {
@@ -101,6 +100,13 @@ h1 {
 	margin-left: 70px; /*= 70px margin */
 	
 	text-align: left;
+}
+
+article p {
+	color: #000;
+}
+article h1 {
+	color: #000;
 }
 
 /*= Sun
@@ -274,4 +280,45 @@ article .section-earth p {
 	right: 99%;
 	
 	background: #80ad98;
+}
+
+/*= Human
+************************************/
+article .section-human h1,
+article .section-human p {
+	color: #fff;
+}
+
+.background .section-human img {
+	position: absolute;
+}
+
+.background .section-human .xray {
+	position: absolute;
+	left: -400px;
+	top: 700px;
+	overflow: hidden;
+	width: 355px;
+	height: 515px;
+}
+
+.background .section-human .xray .bones {
+	left: 50%; 
+	top: 100%;
+	margin-left: -89px;
+}
+
+.background .section-human .humanhand {
+	position: absolute;
+	left: -400px;
+	top: 1215px;
+	overflow: hidden;
+	width: 355px;
+	height: 515px;
+}
+
+.background .section-human .humanhand .hand {
+	left: 50%; 
+	top: 0;
+	margin-left: -89px;
 }
